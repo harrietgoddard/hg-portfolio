@@ -1,3 +1,14 @@
-body {
-    background-color: blue;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto&display=swap');
+
+:root {
+    --teal: #1DBFB4;
+    --offWhite: #f8f8f8;
+    --red: orangered;
+    --gray: rgb(75, 73, 73);
 }
+
+.components-background {
+    background-color: rgb(184, 180, 180);
+    padding: 30px;
+}
+
