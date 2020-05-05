@@ -17,7 +17,9 @@ gulp.task('html-min', () => {
   });
 
 //HTML watcher
-
+gulp.task('watch-html', () => {
+	return gulp.watch('src/*.html', gulp.task('html-min'));
+});
 
 /**
  * STYLES
