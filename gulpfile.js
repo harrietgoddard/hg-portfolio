@@ -16,6 +16,9 @@ gulp.task('html-min', () => {
       .pipe(gulp.dest('dist'));
   });
 
+//HTML watcher
+
+
 /**
  * STYLES
  */
@@ -36,8 +39,9 @@ gulp.task('sass', () => {
 
 gulp.task('styles', gulp.series('sass', 'minify-css'));
 
+//styles watcher
 gulp.task('watch-css', () => {
-	return gulp.watch('scss/**/*.scss', gulp.task('styles'));
+	return gulp.watch('src/scss/*.scss', gulp.task('styles'));
 });
 
 /**
@@ -59,8 +63,9 @@ gulp.task('scripts', () => {
 		.pipe(gulp.dest('dist/js'))
 });
 
+//scripts watcher
 gulp.task('watch-js', () => {
-	return gulp.watch(scripts, gulp.task('scripts'));
+	return gulp.watch('src/js/*.js', gulp.task('scripts'));
 });
 
 /**
