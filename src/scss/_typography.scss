@@ -1,7 +1,47 @@
 
-.links-text {
+.links-text, .links-dot, .title-text-small {
     font-family: "Roboto";
+    text-transform: uppercase;
     letter-spacing: 0.2rem;
+}
+
+.links-dot {
+    font-weight: 500;
+    color: var(--red);
+    font-size: 2rem;
+}
+
+.title-text-small {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: var(--offWhite);
+    text-align: end;
+}
+
+.title-text-large {
+    font-family: "Raleway";
+    font-size: 6rem;
+    color: var(--offWhite);
     text-transform: uppercase;
 }
 
+.title-line-one {
+    letter-spacing: 0.7rem;
+}
+
+.title-line-two {
+    letter-spacing: 1.1rem;
+}
+
+.title-line-three {
+    letter-spacing: 0.9rem;
+}
+
+.title-alt-color {
+    color: var(--teal);
+}
+
+.title-dot {
+    font-family: sans-serif;
+    color: var(--red);
+}
