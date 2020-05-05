@@ -20,10 +20,9 @@ gulp.task('html-min', () => {
  * STYLES
  */
 gulp.task('minify-css', () => {
-	return gulp.src('css/styles.css')
+	return gulp.src('src/css/style.css')
 		.pipe(cleanCSS({ compatibility: 'ie8' }))
-		.pipe(rename({ suffix: '.min' }))
-		.pipe(gulp.dest('./css/'));
+		.pipe(gulp.dest('dist/css/'));
 });
 
 // compile sass from src/scss/ to src/css/style.css
