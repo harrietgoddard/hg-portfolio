@@ -93,3 +93,15 @@ a {
 .title-dot {
   font-family: sans-serif;
   color: var(--red); }
+
+.scroll {
+  font-family: "Roboto";
+  color: var(--offWhite);
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+  transform: rotate(-90deg);
+  display: inline-block; }
+
+.scroll-arrow {
+  color: var(--red);
+  margin-right: 1em; }
