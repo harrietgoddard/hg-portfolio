@@ -19,6 +19,7 @@ gulp.task('html-min', () => {
 /**
  * STYLES
  */
+//minify CSS from src/css/styles.css to dist/css/
 gulp.task('minify-css', () => {
 	return gulp.src('src/css/style.css')
 		.pipe(cleanCSS({ compatibility: 'ie8' }))
@@ -50,11 +51,12 @@ const scripts = [
 	'js/bootstrap.js',
 ];
 
+//minify JS
 gulp.task('scripts', () => {
-	return gulp.src(scripts)
-		.pipe(concat('main.js'))
+	return gulp.src('src/js/scripts.js')
+		// .pipe(concat('main.js'))
 		.pipe(uglify())
-		.pipe(gulp.dest('./js/'))
+		.pipe(gulp.dest('dist/js'))
 });
 
 gulp.task('watch-js', () => {
