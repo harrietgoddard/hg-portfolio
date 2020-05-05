@@ -74,4 +74,4 @@ gulp.task('watch-js', () => {
  * DEFAULT
  * run 'gulp' in the terminal to run this task
  */
-gulp.task('default', gulp.parallel('watch-css', 'watch-js'));
+gulp.task('default', gulp.parallel('watch-html', 'watch-css', 'watch-js'));
