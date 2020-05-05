@@ -1,1 +1,1 @@
-document,window,console.log("hey haz");
+document,window,console.log("hey haz watcher is working yesssss");
