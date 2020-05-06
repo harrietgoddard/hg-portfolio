@@ -50,14 +50,39 @@ a {
   --teal: #1DBFB4;
   --offWhite: #f8f8f8;
   --red: orangered;
-  --gray: rgb(75, 73, 73); }
+  --gray: rgb(75, 73, 73);
+  --fontMain: "Raleway", "Helvetica", sans-serif;
+  --fontAlt: "Roboto", "Helvetica", sans-serif; }
 
 .components-background {
   background-color: #b8b4b4;
   padding: 30px; }
 
+.alt-font, .logo, .nav-link, .pre-title {
+  font-family: var(--fontAlt);
+  text-transform: uppercase;
+  letter-spacing: 0.2rem; }
+
+.logo, .nav-link {
+  color: black;
+  font-size: 1rem; }
+  .logo span, .nav-link span {
+    font-weight: 500;
+    font-size: 2rem;
+    color: var(--red); }
+
+.pre-title {
+  color: var(--offWhite);
+  font-size: 1.4rem;
+  line-height: 2rem;
+  text-align: end; }
+  .pre-title span {
+    font-weight: 500;
+    font-size: 2rem;
+    color: none; }
+
 .links-text, .links-dot, .title-text-small {
-  font-family: "Roboto";
+  font-family: var(--fontAlt);
   text-transform: uppercase;
   letter-spacing: 0.2rem; }
 
@@ -73,7 +98,7 @@ a {
   text-align: end; }
 
 .title-text-large {
-  font-family: "Raleway";
+  font-family: var(--fontMain);
   font-size: 6rem;
   color: var(--offWhite);
   text-transform: uppercase; }
@@ -95,7 +120,7 @@ a {
   color: var(--red); }
 
 .scroll {
-  font-family: "Roboto";
+  font-family: var(--fontAlt);
   color: var(--offWhite);
   font-size: 0.8rem;
   letter-spacing: 0.1rem;
@@ -107,7 +132,7 @@ a {
   margin-right: 1em; }
 
 .intro {
-  font-family: "Raleway";
+  font-family: var(--fontMain);
   font-size: 1.5rem;
   color: var(--offWhite); }
 

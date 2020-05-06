@@ -1,6 +1,41 @@
 
+//alternative font
+.alt-font {
+    font-family: var(--fontAlt);
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+}
+
+// Mixin for alternative text styling
+
+@mixin altText($color, $fontSize, $dotColor) {
+    @extend .alt-font;
+    color: $color;
+    font-size: $fontSize;
+
+    span {
+        font-weight: 500;
+        font-size: 2rem;
+        color: $dotColor;
+    }
+}
+
+//header logo and nav-links
+
+.logo, .nav-link {
+    @include altText(black, 1rem, var(--red));
+}
+
+//pre-title (small text in main title)
+
+.pre-title {
+    @include altText(var(--offWhite), 1.4rem, none);
+    line-height: 2rem;
+    text-align: end;
+}
+
 .links-text, .links-dot, .title-text-small {
-    font-family: "Roboto";
+    font-family: var(--fontAlt);
     text-transform: uppercase;
     letter-spacing: 0.2rem;
 }
@@ -19,7 +54,7 @@
 }
 
 .title-text-large {
-    font-family: "Raleway";
+    font-family: var(--fontMain);
     font-size: 6rem;
     color: var(--offWhite);
     text-transform: uppercase;
@@ -47,7 +82,7 @@
 }
 
 .scroll {
-    font-family: "Roboto";
+    font-family: var(--fontAlt);
     color: var(--offWhite);
     font-size: 0.8rem;
     letter-spacing: 0.1rem;
@@ -62,7 +97,7 @@
 }
 
 .intro {
-    font-family: "Raleway";
+    font-family: var(--fontMain);
     font-size: 1.5rem;
     color: var(--offWhite);
 }
