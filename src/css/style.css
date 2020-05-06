@@ -81,27 +81,25 @@ a {
     font-size: 2rem;
     color: none; }
 
-.links-text, .links-dot, .title-text-small {
-  font-family: var(--fontAlt);
-  text-transform: uppercase;
-  letter-spacing: 0.2rem; }
-
-.links-dot {
-  font-weight: 500;
-  color: var(--red);
-  font-size: 2rem; }
-
-.title-text-small {
-  font-size: 1.4rem;
-  line-height: 2rem;
-  color: var(--offWhite);
-  text-align: end; }
-
-.title-text-large {
+.main-title {
   font-family: var(--fontMain);
   font-size: 6rem;
-  color: var(--offWhite);
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  color: var(--offWhite); }
+  .main-title span span {
+    color: var(--teal); }
+    .main-title span span span {
+      font-family: sans-serif;
+      color: var(--red); }
+
+.main-title-one {
+  letter-spacing: 0.7rem; }
+
+.main-title-two {
+  letter-spacing: 1.1rem; }
+
+.main-title-three {
+  letter-spacing: 0.9rem; }
 
 .title-line-one {
   letter-spacing: 0.7rem; }
@@ -111,13 +109,6 @@ a {
 
 .title-line-three {
   letter-spacing: 0.9rem; }
-
-.title-alt-color {
-  color: var(--teal); }
-
-.title-dot {
-  font-family: sans-serif;
-  color: var(--red); }
 
 .scroll {
   font-family: var(--fontAlt);

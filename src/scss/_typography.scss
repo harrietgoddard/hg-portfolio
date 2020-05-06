@@ -34,31 +34,63 @@
     text-align: end;
 }
 
-.links-text, .links-dot, .title-text-small {
-    font-family: var(--fontAlt);
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-}
+//main title
 
-.links-dot {
-    font-weight: 500;
-    color: var(--red);
-    font-size: 2rem;
-}
-
-.title-text-small {
-    font-size: 1.4rem;
-    line-height: 2rem;
-    color: var(--offWhite);
-    text-align: end;
-}
-
-.title-text-large {
+.main-title {
     font-family: var(--fontMain);
     font-size: 6rem;
-    color: var(--offWhite);
     text-transform: uppercase;
+    color: var(--offWhite);
+
+    span {
+
+        span {
+            color: var(--teal);
+            span {
+                font-family: sans-serif;
+                color: var(--red);
+            }
+        }
+    }
 }
+
+.main-title-one {
+    letter-spacing: 0.7rem;
+}
+
+.main-title-two {
+    letter-spacing: 1.1rem;
+}
+
+.main-title-three {
+    letter-spacing: 0.9rem;
+}
+
+// .links-text, .links-dot, .title-text-small {
+//     font-family: var(--fontAlt);
+//     text-transform: uppercase;
+//     letter-spacing: 0.2rem;
+// }
+
+// .links-dot {
+//     font-weight: 500;
+//     color: var(--red);
+//     font-size: 2rem;
+// }
+
+// .title-text-small {
+//     font-size: 1.4rem;
+//     line-height: 2rem;
+//     color: var(--offWhite);
+//     text-align: end;
+// }
+
+// .title-text-large {
+//     font-family: var(--fontMain);
+//     font-size: 6rem;
+//     color: var(--offWhite);
+//     text-transform: uppercase;
+// }
 
 .title-line-one {
     letter-spacing: 0.7rem;
@@ -72,14 +104,14 @@
     letter-spacing: 0.9rem;
 }
 
-.title-alt-color {
-    color: var(--teal);
-}
+// .title-alt-color {
+//     color: var(--teal);
+// }
 
-.title-dot {
-    font-family: sans-serif;
-    color: var(--red);
-}
+// .title-dot {
+//     font-family: sans-serif;
+//     color: var(--red);
+// }
 
 .scroll {
     font-family: var(--fontAlt);
