@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@600;700&family=Roboto:wght@400;500&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -50,13 +50,126 @@ a {
   --teal: #1DBFB4;
   --offWhite: #f8f8f8;
   --red: orangered;
-  --gray: rgb(75, 73, 73); }
+  --gray: rgb(75, 73, 73);
+  --fontMain: "Raleway", "Helvetica", sans-serif;
+  --fontAlt: "Roboto", "Helvetica", sans-serif; }
 
 .components-background {
   background-color: #b8b4b4;
   padding: 30px; }
 
-.links-text {
-  font-family: "Roboto";
+.main-font, .main-title, .skills-title, .projects-title, .contact-title {
+  font-family: var(--fontMain);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 6rem; }
+
+.logo, .nav-link {
+  font-family: var(--fontAlt);
+  text-transform: uppercase;
   letter-spacing: 0.2rem;
-  text-transform: uppercase; }
+  color: black;
+  font-size: 1rem; }
+  .logo span, .nav-link span {
+    font-weight: 500;
+    font-size: 2rem;
+    color: var(--red); }
+
+.pre-title {
+  font-family: var(--fontAlt);
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  color: var(--offWhite);
+  font-size: 1.4rem;
+  line-height: 2rem;
+  text-align: end; }
+  .pre-title span {
+    font-weight: 500;
+    font-size: 2rem;
+    color: none; }
+
+.main-title {
+  color: var(--offWhite); }
+  .main-title span span {
+    color: var(--teal); }
+    .main-title span span span {
+      font-family: sans-serif;
+      color: var(--red); }
+
+.main-title-top {
+  letter-spacing: 0.7rem; }
+
+.main-title-middle {
+  letter-spacing: 1.1rem; }
+
+.main-title-bottom {
+  letter-spacing: 0.9rem; }
+
+.scroll {
+  display: inline-block;
+  font-family: var(--fontAlt);
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+  color: var(--offWhite);
+  transform: rotate(-90deg); }
+  .scroll span {
+    color: var(--red);
+    margin-right: 1em; }
+
+.intro {
+  font-family: var(--fontMain);
+  font-size: 1.5rem;
+  color: var(--offWhite); }
+
+.intro-title {
+  color: black;
+  font-weight: 700; }
+  .intro-title span {
+    font-family: sans-serif;
+    font-size: 2rem;
+    color: var(--red); }
+
+.skills-title {
+  line-height: 5rem;
+  color: var(--offWhite); }
+  .skills-title span {
+    font-family: sans-serif;
+    color: var(--teal); }
+
+.projects-title {
+  line-height: 5rem;
+  color: black; }
+  .projects-title span {
+    font-family: sans-serif;
+    color: var(--red); }
+
+.contact-title {
+  line-height: 5rem;
+  color: var(--teal); }
+  .contact-title span {
+    font-family: sans-serif;
+    color: var(--red); }
+
+.skills-card-title {
+  font-family: var(--fontAlt);
+  color: var(--offWhite);
+  line-height: 3rem;
+  font-size: 1.8rem;
+  font-weight: 500; }
+
+.skills-listitem {
+  font-family: var(--fontAlt);
+  color: var(--offWhite);
+  line-height: 3rem;
+  font-size: 1.3rem; }
+
+.copyright {
+  font-family: var(--fontAlt);
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  color: black;
+  font-size: 0.8rem; }
+  .copyright span {
+    font-weight: 500;
+    font-size: 2rem;
+    color: none; }

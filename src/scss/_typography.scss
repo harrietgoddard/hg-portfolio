@@ -1,7 +1,167 @@
 
-.links-text {
-    font-family: "Roboto";
-    letter-spacing: 0.2rem;
+//******
+//MIXINS
+//******
+
+//mixin for alternative text styling
+
+@mixin altText($color, $fontSize, $dotColor) {
+    font-family: var(--fontAlt);
     text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    color: $color;
+    font-size: $fontSize;
+
+    span {
+        font-weight: 500;
+        font-size: 2rem;
+        color: $dotColor;
+    }
 }
 
+//main text styling (utility class for @extend)
+
+.main-font {
+    font-family: var(--fontMain);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 6rem;
+}
+
+//mixin for article titles
+
+@mixin articleTitle($color, $dotcolor) {
+    @extend .main-font;
+    line-height: 5rem;
+    color: $color;
+
+    span {
+        font-family: sans-serif;
+        color: $dotcolor;
+    }
+
+}
+
+//mixin for skill-card text
+
+@mixin skillsText($fontSize) {
+    font-family: var(--fontAlt);
+    color: var(--offWhite);
+    line-height: 3rem;
+    font-size: $fontSize;
+}
+
+//******
+//STYLES
+//******
+
+//header logo and nav-links
+
+.logo, .nav-link {
+    @include altText(black, 1rem, var(--red));
+}
+
+//pre-title (small text in main title)
+
+.pre-title {
+    @include altText(var(--offWhite), 1.4rem, none);
+    line-height: 2rem;
+    text-align: end;
+}
+
+//main title
+
+.main-title {
+    @extend .main-font;
+    color: var(--offWhite);
+
+    span {
+
+        span {
+            color: var(--teal);
+            span {
+                font-family: sans-serif;
+                color: var(--red);
+            }
+        }
+    }
+}
+
+.main-title-top {
+    letter-spacing: 0.7rem;
+}
+
+.main-title-middle {
+    letter-spacing: 1.1rem;
+}
+
+.main-title-bottom {
+    letter-spacing: 0.9rem;
+}
+
+//scroll
+
+.scroll {
+    display: inline-block;
+    font-family: var(--fontAlt);
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+    color: var(--offWhite);
+    transform: rotate(-90deg);
+
+    span {
+        color: var(--red);
+        margin-right: 1em;
+    }
+}
+
+//intro
+
+.intro {
+    font-family: var(--fontMain);
+    font-size: 1.5rem;
+    color: var(--offWhite);
+}
+
+.intro-title {
+    color: black;
+    font-weight: 700;
+
+    span {
+    font-family: sans-serif;
+    font-size: 2rem;
+    color: var(--red);
+    }
+}
+
+
+//article titles
+
+.skills-title {
+    @include articleTitle(var(--offWhite), var(--teal));
+}
+
+.projects-title {
+    @include articleTitle(black, var(--red));
+}
+
+.contact-title {
+    @include articleTitle(var(--teal), var(--red));
+}
+
+//skills-card
+
+.skills-card-title {
+    @include skillsText(1.8rem);
+    font-weight: 500;
+}
+
+.skills-listitem {
+    @include skillsText(1.3rem);
+}
+
+//copyright
+
+.copyright {
+    @include altText(black, 0.8rem, none);
+}
