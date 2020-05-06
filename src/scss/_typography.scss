@@ -1,5 +1,14 @@
 
+//title font
+
+.main-font {
+    font-family: var(--fontMain);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
 //alternative font
+
 .alt-font {
     font-family: var(--fontAlt);
     text-transform: uppercase;
@@ -37,9 +46,8 @@
 //main title
 
 .main-title {
-    font-family: var(--fontMain);
+    @extend .main-font;
     font-size: 6rem;
-    text-transform: uppercase;
     color: var(--offWhite);
 
     span {
@@ -99,4 +107,33 @@
     font-size: 2rem;
     color: var(--red);
     }
+}
+
+//mixin for article titles
+
+@mixin articleTitle($color, $dotcolor) {
+    @extend .main-font;
+    font-size: 6rem;
+    line-height: 5rem;
+    color: $color;
+
+    .dot {
+        font-family: sans-serif;
+        color: $dotcolor;
+    }
+
+}
+
+//skills title
+
+.skills-title {
+    @include articleTitle(var(--offWhite), var(--teal));
+}
+
+.projects-title {
+    @include articleTitle(black, var(--red));
+}
+
+.contact-title {
+    @include articleTitle(var(--teal), var(--red));
 }

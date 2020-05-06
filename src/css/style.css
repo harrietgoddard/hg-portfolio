@@ -58,6 +58,11 @@ a {
   background-color: #b8b4b4;
   padding: 30px; }
 
+.main-font, .main-title, .skills-title, .projects-title, .contact-title {
+  font-family: var(--fontMain);
+  text-transform: uppercase;
+  font-weight: 700; }
+
 .alt-font, .logo, .nav-link, .pre-title {
   font-family: var(--fontAlt);
   text-transform: uppercase;
@@ -82,9 +87,7 @@ a {
     color: none; }
 
 .main-title {
-  font-family: var(--fontMain);
   font-size: 6rem;
-  text-transform: uppercase;
   color: var(--offWhite); }
   .main-title span span {
     color: var(--teal); }
@@ -123,4 +126,28 @@ a {
   .intro-title span {
     font-family: sans-serif;
     font-size: 2rem;
+    color: var(--red); }
+
+.skills-title {
+  font-size: 6rem;
+  line-height: 5rem;
+  color: var(--offWhite); }
+  .skills-title .dot {
+    font-family: sans-serif;
+    color: var(--teal); }
+
+.projects-title {
+  font-size: 6rem;
+  line-height: 5rem;
+  color: black; }
+  .projects-title .dot {
+    font-family: sans-serif;
+    color: var(--red); }
+
+.contact-title {
+  font-size: 6rem;
+  line-height: 5rem;
+  color: var(--teal); }
+  .contact-title .dot {
+    font-family: sans-serif;
     color: var(--red); }
