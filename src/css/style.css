@@ -75,6 +75,10 @@ a {
     font-size: 2rem;
     color: var(--red); }
 
+.nav-link:hover {
+  color: var(--red);
+  transition: 0.2s; }
+
 .pre-title {
   font-family: var(--fontAlt);
   text-transform: uppercase;
@@ -127,7 +131,8 @@ a {
   .intro-title span {
     font-family: sans-serif;
     font-size: 2rem;
-    color: var(--red); }
+    color: var(--red);
+    margin-left: 0.1em; }
 
 .skills-title {
   line-height: 5rem;
@@ -163,6 +168,17 @@ a {
   line-height: 3rem;
   font-size: 1.3rem; }
 
+label {
+  font-family: var(--fontAlt);
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  color: var(--offWhite);
+  font-size: 1rem; }
+  label span {
+    font-weight: 500;
+    font-size: 2rem;
+    color: none; }
+
 .copyright {
   font-family: var(--fontAlt);
   text-transform: uppercase;
@@ -173,3 +189,39 @@ a {
     font-weight: 500;
     font-size: 2rem;
     color: none; }
+
+input[type=text], textarea {
+  padding: 0.5em;
+  font-family: var(--fontMain);
+  font-size: 1rem;
+  border: none;
+  resize: none; }
+
+input:focus, textarea:focus {
+  box-shadow: 0 0 2px 2px black;
+  outline: none; }
+
+input[type=submit] {
+  font-family: var(--fontAlt);
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  color: var(--offWhite);
+  font-size: 1rem;
+  padding: 0.5em 1em;
+  background-color: var(--red);
+  border: none;
+  box-shadow: 1px 1px 2px 1px black; }
+  input[type=submit] span {
+    font-weight: 500;
+    font-size: 2rem;
+    color: none; }
+
+input[type=submit]:hover {
+  color: black;
+  transition: 0.2s; }
+
+input[type=submit]:active {
+  position: relative;
+  top: 1px;
+  left: 1px;
+  box-shadow: 0px 0px 1px 0px black; }
