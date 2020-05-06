@@ -184,3 +184,13 @@ label {
     font-weight: 500;
     font-size: 2rem;
     color: none; }
+
+input, textarea {
+  padding: 10px;
+  font-family: var(--fontMain);
+  font-size: 1rem;
+  border: none; }
+
+input:focus, textarea:focus {
+  box-shadow: 0 0 2px 2px black;
+  outline: none; }
