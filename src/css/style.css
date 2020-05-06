@@ -61,14 +61,13 @@ a {
 .main-font, .main-title, .skills-title, .projects-title, .contact-title {
   font-family: var(--fontMain);
   text-transform: uppercase;
-  font-weight: 700; }
-
-.alt-font, .logo, .nav-link, .pre-title {
-  font-family: var(--fontAlt);
-  text-transform: uppercase;
-  letter-spacing: 0.2rem; }
+  font-weight: 700;
+  font-size: 6rem; }
 
 .logo, .nav-link {
+  font-family: var(--fontAlt);
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
   color: black;
   font-size: 1rem; }
   .logo span, .nav-link span {
@@ -77,6 +76,9 @@ a {
     color: var(--red); }
 
 .pre-title {
+  font-family: var(--fontAlt);
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
   color: var(--offWhite);
   font-size: 1.4rem;
   line-height: 2rem;
@@ -87,7 +89,6 @@ a {
     color: none; }
 
 .main-title {
-  font-size: 6rem;
   color: var(--offWhite); }
   .main-title span span {
     color: var(--teal); }
@@ -129,25 +130,46 @@ a {
     color: var(--red); }
 
 .skills-title {
-  font-size: 6rem;
   line-height: 5rem;
   color: var(--offWhite); }
-  .skills-title .dot {
+  .skills-title span {
     font-family: sans-serif;
     color: var(--teal); }
 
 .projects-title {
-  font-size: 6rem;
   line-height: 5rem;
   color: black; }
-  .projects-title .dot {
+  .projects-title span {
     font-family: sans-serif;
     color: var(--red); }
 
 .contact-title {
-  font-size: 6rem;
   line-height: 5rem;
   color: var(--teal); }
-  .contact-title .dot {
+  .contact-title span {
     font-family: sans-serif;
     color: var(--red); }
+
+.skills-card-title {
+  font-family: var(--fontAlt);
+  color: var(--offWhite);
+  line-height: 3rem;
+  font-size: 1.8rem;
+  font-weight: 500; }
+
+.skills-listitem {
+  font-family: var(--fontAlt);
+  color: var(--offWhite);
+  line-height: 3rem;
+  font-size: 1.3rem; }
+
+.copyright {
+  font-family: var(--fontAlt);
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  color: black;
+  font-size: 0.8rem; }
+  .copyright span {
+    font-weight: 500;
+    font-size: 2rem;
+    color: none; }

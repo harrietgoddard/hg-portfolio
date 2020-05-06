@@ -1,24 +1,14 @@
 
-//title font
+//******
+//MIXINS
+//******
 
-.main-font {
-    font-family: var(--fontMain);
-    text-transform: uppercase;
-    font-weight: 700;
-}
+//mixin for alternative text styling
 
-//alternative font
-
-.alt-font {
+@mixin altText($color, $fontSize, $dotColor) {
     font-family: var(--fontAlt);
     text-transform: uppercase;
     letter-spacing: 0.2rem;
-}
-
-// Mixin for alternative text styling
-
-@mixin altText($color, $fontSize, $dotColor) {
-    @extend .alt-font;
     color: $color;
     font-size: $fontSize;
 
@@ -28,6 +18,42 @@
         color: $dotColor;
     }
 }
+
+//main text styling (utility class for @extend)
+
+.main-font {
+    font-family: var(--fontMain);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 6rem;
+}
+
+//mixin for article titles
+
+@mixin articleTitle($color, $dotcolor) {
+    @extend .main-font;
+    line-height: 5rem;
+    color: $color;
+
+    span {
+        font-family: sans-serif;
+        color: $dotcolor;
+    }
+
+}
+
+//mixin for skill-card text
+
+@mixin skillsText($fontSize) {
+    font-family: var(--fontAlt);
+    color: var(--offWhite);
+    line-height: 3rem;
+    font-size: $fontSize;
+}
+
+//******
+//STYLES
+//******
 
 //header logo and nav-links
 
@@ -47,7 +73,6 @@
 
 .main-title {
     @extend .main-font;
-    font-size: 6rem;
     color: var(--offWhite);
 
     span {
@@ -109,22 +134,8 @@
     }
 }
 
-//mixin for article titles
 
-@mixin articleTitle($color, $dotcolor) {
-    @extend .main-font;
-    font-size: 6rem;
-    line-height: 5rem;
-    color: $color;
-
-    .dot {
-        font-family: sans-serif;
-        color: $dotcolor;
-    }
-
-}
-
-//skills title
+//article titles
 
 .skills-title {
     @include articleTitle(var(--offWhite), var(--teal));
@@ -136,4 +147,21 @@
 
 .contact-title {
     @include articleTitle(var(--teal), var(--red));
+}
+
+//skills-card
+
+.skills-card-title {
+    @include skillsText(1.8rem);
+    font-weight: 500;
+}
+
+.skills-listitem {
+    @include skillsText(1.3rem);
+}
+
+//copyright
+
+.copyright {
+    @include altText(black, 0.8rem, none);
 }
