@@ -160,6 +160,12 @@
     @include skillsText(1.3rem);
 }
 
+//form labels
+
+label {
+    @include altText(var(--offWhite), 1rem, none);
+}
+
 //copyright
 
 .copyright {

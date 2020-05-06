@@ -163,6 +163,17 @@ a {
   line-height: 3rem;
   font-size: 1.3rem; }
 
+label {
+  font-family: var(--fontAlt);
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  color: var(--offWhite);
+  font-size: 1rem; }
+  label span {
+    font-weight: 500;
+    font-size: 2rem;
+    color: none; }
+
 .copyright {
   font-family: var(--fontAlt);
   text-transform: uppercase;
