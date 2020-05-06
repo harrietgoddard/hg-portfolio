@@ -61,6 +61,11 @@
     @include altText(black, 1rem, var(--red));
 }
 
+.nav-link:hover {
+    color: var(--red);
+    transition: 0.2s;
+}
+
 //pre-title (small text in main title)
 
 .pre-title {
@@ -131,6 +136,7 @@
     font-family: sans-serif;
     font-size: 2rem;
     color: var(--red);
+    margin-left: 0.1em;
     }
 }
 
