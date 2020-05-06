@@ -54,79 +54,35 @@
     }
 }
 
-.main-title-one {
+.main-title-top {
     letter-spacing: 0.7rem;
 }
 
-.main-title-two {
+.main-title-middle {
     letter-spacing: 1.1rem;
 }
 
-.main-title-three {
+.main-title-bottom {
     letter-spacing: 0.9rem;
 }
 
-// .links-text, .links-dot, .title-text-small {
-//     font-family: var(--fontAlt);
-//     text-transform: uppercase;
-//     letter-spacing: 0.2rem;
-// }
-
-// .links-dot {
-//     font-weight: 500;
-//     color: var(--red);
-//     font-size: 2rem;
-// }
-
-// .title-text-small {
-//     font-size: 1.4rem;
-//     line-height: 2rem;
-//     color: var(--offWhite);
-//     text-align: end;
-// }
-
-// .title-text-large {
-//     font-family: var(--fontMain);
-//     font-size: 6rem;
-//     color: var(--offWhite);
-//     text-transform: uppercase;
-// }
-
-.title-line-one {
-    letter-spacing: 0.7rem;
-}
-
-.title-line-two {
-    letter-spacing: 1.1rem;
-}
-
-.title-line-three {
-    letter-spacing: 0.9rem;
-}
-
-// .title-alt-color {
-//     color: var(--teal);
-// }
-
-// .title-dot {
-//     font-family: sans-serif;
-//     color: var(--red);
-// }
+//scroll
 
 .scroll {
+    display: inline-block;
     font-family: var(--fontAlt);
-    color: var(--offWhite);
     font-size: 0.8rem;
     letter-spacing: 0.1rem;
+    color: var(--offWhite);
     transform: rotate(-90deg);
-    display: inline-block;
 
+    span {
+        color: var(--red);
+        margin-right: 1em;
+    }
 }
 
-.scroll-arrow {
-    color: var(--red);
-    margin-right: 1em;
-}
+//intro
 
 .intro {
     font-family: var(--fontMain);
@@ -136,11 +92,11 @@
 
 .intro-title {
     color: black;
-}
+    font-weight: 700;
 
-.intro-dot {
+    span {
     font-family: sans-serif;
     font-size: 2rem;
     color: var(--red);
-
+    }
 }

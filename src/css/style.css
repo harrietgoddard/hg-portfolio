@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@600;700&family=Roboto:wght@400;500&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -92,35 +92,25 @@ a {
       font-family: sans-serif;
       color: var(--red); }
 
-.main-title-one {
+.main-title-top {
   letter-spacing: 0.7rem; }
 
-.main-title-two {
+.main-title-middle {
   letter-spacing: 1.1rem; }
 
-.main-title-three {
-  letter-spacing: 0.9rem; }
-
-.title-line-one {
-  letter-spacing: 0.7rem; }
-
-.title-line-two {
-  letter-spacing: 1.1rem; }
-
-.title-line-three {
+.main-title-bottom {
   letter-spacing: 0.9rem; }
 
 .scroll {
+  display: inline-block;
   font-family: var(--fontAlt);
-  color: var(--offWhite);
   font-size: 0.8rem;
   letter-spacing: 0.1rem;
-  transform: rotate(-90deg);
-  display: inline-block; }
-
-.scroll-arrow {
-  color: var(--red);
-  margin-right: 1em; }
+  color: var(--offWhite);
+  transform: rotate(-90deg); }
+  .scroll span {
+    color: var(--red);
+    margin-right: 1em; }
 
 .intro {
   font-family: var(--fontMain);
@@ -128,9 +118,9 @@ a {
   color: var(--offWhite); }
 
 .intro-title {
-  color: black; }
-
-.intro-dot {
-  font-family: sans-serif;
-  font-size: 2rem;
-  color: var(--red); }
+  color: black;
+  font-weight: 700; }
+  .intro-title span {
+    font-family: sans-serif;
+    font-size: 2rem;
+    color: var(--red); }
