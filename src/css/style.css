@@ -102,7 +102,9 @@ a {
     color: var(--teal); }
     .main-title span span span {
       font-family: sans-serif;
-      color: var(--red); }
+      color: var(--red);
+      position: relative;
+      right: 10px; }
 
 .main-title-top {
   letter-spacing: 0.7rem; }
@@ -257,10 +259,19 @@ body:after {
   background-color: white; }
 
 .hero {
-  height: 200vh;
+  height: 250vh;
   background-color: var(--offWhite); }
 
 .wiper {
   background-color: var(--teal);
   height: 100%;
-  width: 50%; }
+  width: 51.4%; }
+
+.main-title {
+  position: fixed;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%); }
+  .main-title span {
+    display: inline-block;
+    padding: 3px; }

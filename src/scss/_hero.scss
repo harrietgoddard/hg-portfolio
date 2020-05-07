@@ -1,10 +1,22 @@
 .hero {
-    height: 200vh;
+    height: 250vh;
     background-color: var(--offWhite);
 }
 
 .wiper {
     background-color: var(--teal);
     height: 100%;
-    width: 50%;
+    width: 51.4%;
+}
+
+.main-title {
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+
+    span {
+        display: inline-block;
+        padding: 3px;
+    }
 }
