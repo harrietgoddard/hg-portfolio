@@ -53,7 +53,7 @@ a {
   --gray: rgb(75, 73, 73);
   --fontMain: "Raleway", "Helvetica", sans-serif;
   --fontAlt: "Roboto", "Helvetica", sans-serif;
-  --border: 3em; }
+  --border: 2.5em; }
 
 .components {
   background-color: #b8b4b4;
