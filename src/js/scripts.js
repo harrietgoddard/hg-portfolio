@@ -7,10 +7,10 @@
     w.addEventListener("scroll", () => {
 
         if(window.pageYOffset > 0) {
-            wiper.style.width = "100%";
+            wiper.style.width = "calc(100% - 2 * var(--border)";
             wiper.style.transition = "1.5s"; //can we combine the transitions?
         } else {
-            wiper.style.width = "50%";
+            wiper.style.width = "calc(50% - var(--border)";
             wiper.style.transition = "1.5s";
         }
 

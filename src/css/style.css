@@ -247,7 +247,8 @@ input[type=submit]:active {
   position: fixed;
   height: var(--border);
   left: var(--border);
-  right: var(--border); }
+  right: var(--border);
+  z-index: 5; }
 
 .wrapper {
   margin: 0 var(--border); }
@@ -271,13 +272,13 @@ body:after {
   top: var(--border);
   left: var(--border);
   bottom: 0;
-  width: 50%;
-  height: 100%; }
+  width: calc(50% - var(--border));
+  height: 250vh; }
 
 .main-title {
   position: fixed;
   top: 50%;
   right: 50%;
-  transform: translate(57%, -50%); }
+  transform: translate(41.5%, -50%); }
   .main-title span {
     display: inline-block; }
