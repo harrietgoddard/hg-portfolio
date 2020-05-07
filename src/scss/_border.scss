@@ -1,0 +1,19 @@
+
+.placeholder { //remove this
+    background-color: rgb(184, 180, 180);
+    height: 150vh;
+}
+
+.wrapper {
+    margin: 0 var(--border);
+}
+
+body:after {
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: var(--border);
+    background-color: white; //remove this?
+}
