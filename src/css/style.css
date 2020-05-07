@@ -239,15 +239,10 @@ input[type=submit]:active {
   justify-content: space-between;
   align-items: center;
   background-color: white;
-  padding-bottom: 0.3em;
   position: fixed;
   height: var(--border);
   left: var(--border);
   right: var(--border); }
-
-.placeholder {
-  background-color: #b8b4b4;
-  height: 150vh; }
 
 .wrapper {
   margin: 0 var(--border); }
@@ -260,3 +255,12 @@ body:after {
   bottom: 0;
   height: var(--border);
   background-color: white; }
+
+.hero {
+  height: 200vh;
+  background-color: var(--offWhite); }
+
+.wiper {
+  background-color: var(--teal);
+  height: 100%;
+  width: 50%; }
