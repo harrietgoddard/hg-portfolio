@@ -87,20 +87,25 @@
             span {
                 font-family: sans-serif;
                 color: var(--red);
+                position: relative;
+                right: 10px;
             }
         }
     }
 }
 
 .main-title-top {
+    padding: 6px 0;
     letter-spacing: 0.7rem;
 }
 
 .main-title-middle {
-    letter-spacing: 1.1rem;
+    padding: 6px 0;
+    letter-spacing: 1rem;
 }
 
 .main-title-bottom {
+    padding: 6px 0;
     letter-spacing: 0.9rem;
 }
 

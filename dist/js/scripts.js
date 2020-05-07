@@ -1,1 +1,1 @@
-document,window,console.log("hey haz watcher is working yesssss");
+((t,e)=>{console.log("hey haz javascript is working");let i=t.getElementById("wiper"),s=t.getElementById("mainTitle");e.addEventListener("scroll",()=>{window.pageYOffset>0?(i.style.width="calc(100% - 2 * var(--border)",i.style.transition="1.5s",s.style.right="2.7%",s.style.transition="1.5s"):(i.style.width="calc(50% - var(--border)",i.style.transition="1.5s",s.style.right="50%",s.style.transition="50%")})})(document,window);

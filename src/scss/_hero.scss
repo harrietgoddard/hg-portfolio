@@ -1,0 +1,25 @@
+.hero {
+    height: 250vh;
+    background-color: var(--offWhite);
+}
+
+.wiper {
+    background-color: var(--teal);
+    position: absolute;
+    top: var(--border);
+    left: var(--border);
+    bottom: 0;
+    width: calc(50% - var(--border));
+    height: 250vh;
+}
+
+.main-title {
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    transform: translate(41.5%, -50%);
+
+    span {
+        display: inline-block;
+    }
+}

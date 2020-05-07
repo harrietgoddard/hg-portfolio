@@ -102,15 +102,20 @@ a {
     color: var(--teal); }
     .main-title span span span {
       font-family: sans-serif;
-      color: var(--red); }
+      color: var(--red);
+      position: relative;
+      right: 10px; }
 
 .main-title-top {
+  padding: 6px 0;
   letter-spacing: 0.7rem; }
 
 .main-title-middle {
-  letter-spacing: 1.1rem; }
+  padding: 6px 0;
+  letter-spacing: 1rem; }
 
 .main-title-bottom {
+  padding: 6px 0;
   letter-spacing: 0.9rem; }
 
 .scroll {
@@ -239,15 +244,11 @@ input[type=submit]:active {
   justify-content: space-between;
   align-items: center;
   background-color: white;
-  padding-bottom: 0.3em;
   position: fixed;
   height: var(--border);
   left: var(--border);
-  right: var(--border); }
-
-.placeholder {
-  background-color: #b8b4b4;
-  height: 150vh; }
+  right: var(--border);
+  z-index: 5; }
 
 .wrapper {
   margin: 0 var(--border); }
@@ -260,3 +261,24 @@ body:after {
   bottom: 0;
   height: var(--border);
   background-color: white; }
+
+.hero {
+  height: 250vh;
+  background-color: var(--offWhite); }
+
+.wiper {
+  background-color: var(--teal);
+  position: absolute;
+  top: var(--border);
+  left: var(--border);
+  bottom: 0;
+  width: calc(50% - var(--border));
+  height: 250vh; }
+
+.main-title {
+  position: fixed;
+  top: 50%;
+  right: 50%;
+  transform: translate(41.5%, -50%); }
+  .main-title span {
+    display: inline-block; }
