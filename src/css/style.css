@@ -107,12 +107,15 @@ a {
       right: 10px; }
 
 .main-title-top {
+  padding: 6px 0;
   letter-spacing: 0.7rem; }
 
 .main-title-middle {
-  letter-spacing: 1.1rem; }
+  padding: 6px 0;
+  letter-spacing: 1rem; }
 
 .main-title-bottom {
+  padding: 6px 0;
   letter-spacing: 0.9rem; }
 
 .scroll {
@@ -264,14 +267,17 @@ body:after {
 
 .wiper {
   background-color: var(--teal);
-  height: 100%;
-  width: 51.4%; }
+  position: absolute;
+  top: var(--border);
+  left: var(--border);
+  bottom: 0;
+  width: 50%;
+  height: 100%; }
 
 .main-title {
   position: fixed;
   top: 50%;
   right: 50%;
-  transform: translate(50%, -50%); }
+  transform: translate(57%, -50%); }
   .main-title span {
-    display: inline-block;
-    padding: 3px; }
+    display: inline-block; }
