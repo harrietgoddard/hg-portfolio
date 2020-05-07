@@ -13,9 +13,13 @@
 
     --fontMain: "Raleway", "Helvetica", sans-serif;
     --fontAlt: "Roboto", "Helvetica", sans-serif;
+
+    //border
+
+    --border: 3em;
 }
 
-.components-background {
+.components {
     background-color: rgb(184, 180, 180);
     padding: 30px;
 }

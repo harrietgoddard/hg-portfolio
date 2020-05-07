@@ -52,9 +52,10 @@ a {
   --red: orangered;
   --gray: rgb(75, 73, 73);
   --fontMain: "Raleway", "Helvetica", sans-serif;
-  --fontAlt: "Roboto", "Helvetica", sans-serif; }
+  --fontAlt: "Roboto", "Helvetica", sans-serif;
+  --border: 3em; }
 
-.components-background {
+.components {
   background-color: #b8b4b4;
   padding: 30px; }
 
@@ -239,4 +240,23 @@ input[type=submit]:active {
   align-items: center;
   background-color: white;
   padding-bottom: 0.3em;
-  height: 8vh; }
+  position: fixed;
+  height: var(--border);
+  left: var(--border);
+  right: var(--border); }
+
+.placeholder {
+  background-color: #b8b4b4;
+  height: 150vh; }
+
+.wrapper {
+  margin: 0 var(--border); }
+
+body:after {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: var(--border);
+  background-color: white; }

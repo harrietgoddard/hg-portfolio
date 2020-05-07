@@ -6,7 +6,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white; //remove this
+    background-color: white; //remove this?
     padding-bottom: 0.3em;
-    height: 8vh;
+    position: fixed;
+    height: var(--border);
+    left: var(--border);
+    right: var(--border);
 }
