@@ -12,7 +12,7 @@
             wiper.style.transition = "1.05s"; //can we combine the transitions?
             wiper.style.transitionTimingFunction = "cubic-bezier(0.7, 0, 0.3, 1)";
 
-            mainTitle.style.right = "2.8%";
+            mainTitle.style.right = "calc(0.17 * var(--border))";
             mainTitle.style.transition = "1s"; //better to put this in css?
             mainTitle.style.transitionTimingFunction = "cubic-bezier(0.7, 0, 0.3, 1)";
         } else {
