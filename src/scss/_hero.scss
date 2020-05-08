@@ -29,3 +29,12 @@
     top: 16%;
     right: 51%;
 }
+
+.intro {
+    opacity: 0;
+    position: fixed;
+    top: 50%;
+    left: 20%;
+    right: 30%;
+    transform: translateY(-50%);
+}

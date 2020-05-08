@@ -5,6 +5,7 @@
     let wiper = d.getElementById("wiper");
     let mainTitle = d.getElementById("mainTitle");
     let preTitle = d.getElementById("preTitle");
+    let intro = d.getElementById("intro");
 
     w.addEventListener("scroll", () => {
 
@@ -20,6 +21,10 @@
             preTitle.style.top = "-5%";
             preTitle.style.transition = "1s";
             preTitle.style.transitionTimingFunction = "cubic-bezier(0.7, 0, 0.3, 1)";
+
+            intro.style.opacity = "1";
+            intro.style.transition = "1.5s";
+            intro.style.transitionDelay = "0.5s";
         } else {
             wiper.style.width = "calc(50% - var(--border)";
             wiper.style.transition = "1.05s";
@@ -32,6 +37,9 @@
             preTitle.style.top = "16%";
             preTitle.style.transition = "1s";
             preTitle.style.transitionTimingFunction = "cubic-bezier(0.7, 0, 0.3, 1)";
+
+            intro.style.opacity = "0";
+            intro.style.transition = "1s";
         }
 
     })
