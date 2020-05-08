@@ -318,3 +318,7 @@ body:after {
     transform: translateX(-1em); }
   100% {
     transform: translateX(0); } }
+
+.skills {
+  height: 80vh;
+  background-color: #b8b4b4; }
