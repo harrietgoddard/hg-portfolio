@@ -98,24 +98,23 @@ a {
 
 .main-title {
   color: var(--offWhite); }
-  .main-title span span {
-    color: var(--teal); }
-    .main-title span span span {
-      font-family: sans-serif;
-      color: var(--red);
-      position: relative;
-      right: 10px; }
+  .main-title span {
+    padding: 4.5px 0; }
+    .main-title span span {
+      color: var(--teal); }
+      .main-title span span span {
+        font-family: sans-serif;
+        color: var(--red);
+        position: relative;
+        right: 10px; }
 
 .main-title-top {
-  padding: 6px 0;
   letter-spacing: 0.7rem; }
 
 .main-title-middle {
-  padding: 6px 0;
   letter-spacing: 1rem; }
 
 .main-title-bottom {
-  padding: 6px 0;
   letter-spacing: 0.9rem; }
 
 .scroll {
@@ -279,6 +278,6 @@ body:after {
   position: fixed;
   top: 50%;
   right: 50%;
-  transform: translate(41.5%, -50%); }
+  transform: translate(42%, -50%); }
   .main-title span {
     display: inline-block; }
