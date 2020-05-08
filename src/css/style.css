@@ -126,7 +126,8 @@ a {
   transform: rotate(-90deg); }
   .scroll span {
     color: var(--red);
-    margin-right: 1em; }
+    font-weight: 700;
+    margin-right: 0.5em; }
 
 .intro {
   font-family: var(--fontMain);
@@ -288,11 +289,6 @@ body:after {
   top: 16%;
   right: 51%; }
 
-.scroll {
-  position: fixed;
-  top: 80%;
-  right: 49%; }
-
 .intro {
   opacity: 0;
   position: fixed;
@@ -300,3 +296,25 @@ body:after {
   left: 18%;
   right: 30%;
   transform: translateY(-50%); }
+
+.scroll {
+  position: fixed;
+  top: 80%;
+  right: 49%; }
+
+.chevron {
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  display: inline-block; }
+
+.bounce {
+  animation-name: bounce;
+  animation-timing-function: ease; }
+
+@keyframes bounce {
+  0% {
+    transform: translateX(0); }
+  50% {
+    transform: translateX(-1em); }
+  100% {
+    transform: translateX(0); } }
