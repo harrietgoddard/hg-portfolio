@@ -126,12 +126,14 @@ a {
   transform: rotate(-90deg); }
   .scroll span {
     color: var(--red);
-    margin-right: 1em; }
+    font-weight: 700;
+    margin-right: 0.5em; }
 
 .intro {
   font-family: var(--fontMain);
   font-size: 1.5rem;
-  color: var(--offWhite); }
+  color: var(--offWhite);
+  line-height: 1.9rem; }
 
 .intro-title {
   color: black;
@@ -281,3 +283,38 @@ body:after {
   transform: translate(42%, -50%); }
   .main-title span {
     display: inline-block; }
+
+.pre-title {
+  position: fixed;
+  top: 16%;
+  right: 51%; }
+
+.intro {
+  opacity: 0;
+  position: fixed;
+  top: 50%;
+  left: 18%;
+  right: 30%;
+  transform: translateY(-50%); }
+
+.scroll {
+  position: fixed;
+  top: 80%;
+  right: 49%; }
+
+.chevron {
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  display: inline-block; }
+
+.bounce {
+  animation-name: bounce;
+  animation-timing-function: ease; }
+
+@keyframes bounce {
+  0% {
+    transform: translateX(0); }
+  50% {
+    transform: translateX(-1em); }
+  100% {
+    transform: translateX(0); } }

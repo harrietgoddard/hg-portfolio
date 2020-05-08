@@ -120,7 +120,8 @@
 
     span {
         color: var(--red);
-        margin-right: 1em;
+        font-weight: 700;
+        margin-right: 0.5em;
     }
 }
 
@@ -130,6 +131,7 @@
     font-family: var(--fontMain);
     font-size: 1.5rem;
     color: var(--offWhite);
+    line-height: 1.9rem;
 }
 
 .intro-title {
