@@ -81,6 +81,7 @@
     color: var(--offWhite);
 
     span {
+        padding: 3px 0;
 
         span {
             color: var(--teal);
@@ -94,18 +95,16 @@
     }
 }
 
+
 .main-title-top {
-    padding: 6px 0;
     letter-spacing: 0.7rem;
 }
 
 .main-title-middle {
-    padding: 6px 0;
     letter-spacing: 1rem;
 }
 
 .main-title-bottom {
-    padding: 6px 0;
     letter-spacing: 0.9rem;
 }
 
