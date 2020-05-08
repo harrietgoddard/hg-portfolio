@@ -30,11 +30,17 @@
     right: 51%;
 }
 
+.scroll {
+    position: fixed;
+    top: 80%;
+    right: 49%;
+}
+
 .intro {
     opacity: 0;
     position: fixed;
     top: 50%;
-    left: 20%;
+    left: 18%;
     right: 30%;
     transform: translateY(-50%);
 }
