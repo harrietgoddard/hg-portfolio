@@ -80,7 +80,7 @@ a {
     color: var(--red); }
 
 .nav-link:hover {
-  color: var(--red);
+  color: var(--teal);
   transition: 0.2s; }
 
 .pre-title {
