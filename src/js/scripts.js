@@ -7,6 +7,8 @@
     let preTitle = d.getElementById("preTitle");
     let intro = d.getElementById("intro");
     let scroll = d.getElementById("scroll");
+    let hero = d.getElementById("hero");
+    let header = d.getElementById("header");
 
     w.addEventListener("scroll", () => {
 
@@ -30,6 +32,7 @@
             intro.style.opacity = "1";
             intro.style.transition = "1.5s";
             intro.style.transitionDelay = "1s";
+
         } else {
             wiper.style.width = "calc(50% - var(--border)";
             wiper.style.transition = "1.10s";
@@ -51,6 +54,27 @@
             intro.style.transition = "1s";
         }
 
+    })
+    
+    window.addEventListener("scroll", () => {
+        let trigger = hero.scrollHeight + (header.scrollHeight * 2) - window.innerHeight;
+        console.log(window.pageYOffset);
+        console.log(trigger);
+        let offset = (window.pageYOffset - trigger) / window.innerHeight;
+        let change = 50 - (+offset * 100);
+        if(window.pageYOffset > trigger) {
+            mainTitle.style.top = `${change}%`;
+            mainTitle.style.transition = "top 0s linear";
+
+            intro.style.top = `${change}%`;
+            intro.style.transition = "top 0s linear";
+        } else if (window.pageYOffset > window.innerHeight) {
+            mainTitle.style.top = "50%";
+            mainTitle.style.transition = "top 0s linear";
+
+            intro.style.top = "50%";
+            intro.style.transition = "top 0s linear";
+        }
     })
 
 })(document, window);

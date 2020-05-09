@@ -247,8 +247,9 @@ input[type=submit]:active {
   background-color: white;
   position: fixed;
   height: var(--border);
-  left: var(--border);
-  right: var(--border);
+  left: 0;
+  right: 0;
+  padding: 0 var(--border);
   z-index: 5; }
 
 .wrapper {
