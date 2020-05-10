@@ -51,12 +51,14 @@ a {
   --offWhite: #f8f8f8;
   --red: orangered;
   --gray: rgb(75, 73, 73);
+  --lightGray: rgb(199, 195, 195);
   --darkGray: rgb(49, 48, 48);
   --fontMain: "Raleway", "Helvetica", sans-serif;
   --fontAlt: "Roboto", "Helvetica", sans-serif;
   --border: 2.5em; }
 
 .components {
+  height: 300vh;
   background-color: #b8b4b4;
   padding: 30px; }
 
@@ -168,16 +170,16 @@ a {
 
 .skills-card-title {
   font-family: var(--fontAlt);
-  color: var(--offWhite);
   line-height: 3rem;
   font-size: 1.8rem;
+  color: var(--offWhite);
   font-weight: 500; }
 
 .skills-listitem {
   font-family: var(--fontAlt);
-  color: var(--offWhite);
   line-height: 3rem;
-  font-size: 1.3rem; }
+  font-size: 1.3rem;
+  color: var(--lightGray); }
 
 label {
   font-family: var(--fontAlt);
@@ -326,7 +328,8 @@ body:after {
   background-image: url("../images/computer-screen.jpg");
   background-size: cover;
   background-color: var(--darkGray);
-  background-blend-mode: soft-light; }
+  background-blend-mode: soft-light;
+  padding: 10vh 0; }
   .skills header {
     display: flex;
     justify-content: center;
@@ -334,6 +337,22 @@ body:after {
 
 .skills-title {
   display: inline-block; }
+
+.skills-container {
+  display: flex;
+  justify-content: space-between; }
+
+.skills-card {
+  display: inline-block;
+  position: relative; }
+
+.skills-card:before {
+  content: "";
+  border-left: 4px solid var(--red);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -30px; }
 
 .projects {
   height: 100vh;

@@ -4,16 +4,35 @@
     background-size: cover;
     background-color: var(--darkGray);
     background-blend-mode: soft-light;
+    padding: 10vh 0;
 
-    header { //make this a mixin for all article headers
+    header { 
         display: flex;
         justify-content: center;
         padding-top: 10vh;
     }
 }
 
-
-
 .skills-title {
     display: inline-block;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+    // padding: 19vh 8vw;
+}
+
+.skills-card {
+    display: inline-block;
+    position: relative;
+}
+
+.skills-card:before {
+    content: "";
+    border-left: 4px solid var(--red);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -30px;
 }
