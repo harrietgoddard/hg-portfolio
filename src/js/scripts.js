@@ -84,4 +84,9 @@
         }
     })
 
+    //scroll to top of page on reload
+    w.addEventListener("beforeunload", () => {
+        w.scrollTo(0,0);
+    })
+
 })(document, window);
