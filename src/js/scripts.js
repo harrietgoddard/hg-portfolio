@@ -9,6 +9,7 @@
     let mainTitle = d.getElementById("mainTitle");
     let intro = d.getElementById("intro");
     let scroll = d.getElementById("scroll");
+    let navMain = d.getElementById("navMain");
 
     let setStyle = (element, propertyObject) => {
         for (property in propertyObject) {
@@ -85,8 +86,8 @@
     })
 
     //scroll to top of page on reload
-    w.addEventListener("beforeunload", () => {
-        w.scrollTo(0,0);
-    })
+    window.onbeforeunload = () => {
+        window.scrollTo(0, 0);
+    }
 
 })(document, window);
