@@ -26,28 +26,27 @@
 
             setStyle(wiper, {
                 "width": "calc(100% - 2 * var(--border)",
-                "transition": "1.10s",
+                "transition": "width 1.10s",
             });
 
             setStyle(preTitle, {
                 "top": "-5%",
-                "transition" : "1s",
+                "transition" : "top 1s",
             });
 
             setStyle(mainTitle, {
                 "right": "calc(0.17 * var(--border))",
-                "transition" : "1s",
+                "transition" : "right 1s"
             });
             
             setStyle(intro, {
                 "opacity": "1",
-                "transition" : "3s",
-                "transitionDelay" : "1s"
+                "transition" : "opacity 1s 1s"
             });
 
             setStyle(scroll, {
                 "right": "calc(0.8 * var(--border))",
-                "transition" : "1s",
+                "transition" : "right 1s"
             });
 
             elastisize([wiper, mainTitle, preTitle, scroll]);
