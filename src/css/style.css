@@ -327,3 +327,10 @@ body:after {
   background-size: cover;
   background-color: var(--darkGray);
   background-blend-mode: soft-light; }
+  .skills header {
+    display: flex;
+    justify-content: center;
+    padding-top: 10vh; }
+
+.skills-title {
+  display: inline-block; }

@@ -1,7 +1,19 @@
-.skills { //remove this
+.skills {
     height: calc(100vh - var(--border) * 2);
     background-image: url("../images/computer-screen.jpg");
     background-size: cover;
     background-color: var(--darkGray);
     background-blend-mode: soft-light;
+
+    header { //make this a mixin for all article headers
+        display: flex;
+        justify-content: center;
+        padding-top: 10vh;
+    }
+}
+
+
+
+.skills-title {
+    display: inline-block;
 }
