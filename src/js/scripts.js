@@ -12,7 +12,7 @@
 
     w.addEventListener("scroll", () => {
 
-        if(window.pageYOffset > 0) {
+        if(w.pageYOffset > 0) {
             wiper.style.width = "calc(100% - 2 * var(--border)";
             wiper.style.transition = "1.10s"; //can we combine the transitions?
             wiper.style.transitionTimingFunction = "cubic-bezier(0.7, 0, 0.3, 1)";
@@ -56,13 +56,13 @@
 
     })
     
-    window.addEventListener("scroll", () => {
-        let trigger = hero.scrollHeight + (header.scrollHeight * 2) - window.innerHeight;
-        console.log(window.pageYOffset);
+    w.addEventListener("scroll", () => {
+        let trigger = hero.scrollHeight + (header.scrollHeight * 2) - w.innerHeight;
+        console.log(w.pageYOffset);
         console.log(trigger);
-        let offset = (window.pageYOffset - trigger) / window.innerHeight;
+        let offset = (w.pageYOffset - trigger) / w.innerHeight;
         let change = 50 - (+offset * 100);
-        if(window.pageYOffset > trigger) {
+        if(w.pageYOffset > trigger) {
             mainTitle.style.top = `${change}%`;
             mainTitle.style.transition = "top 0s linear";
 
@@ -70,7 +70,7 @@
             intro.style.transition = "top 0s linear";
 
             scroll.style.display = "none";
-        } else if (window.pageYOffset > window.innerHeight) {
+        } else if (w.pageYOffset > w.innerHeight) {
             mainTitle.style.top = "50%";
             mainTitle.style.transition = "top 0s linear";
 
