@@ -39,6 +39,11 @@
                 "right": "calc(0.17 * var(--border))",
                 "transition" : "right 1s"
             });
+
+            setStyle(navMain, {
+                "opacity": "1",
+                "transition": "opacity 1s 2s"
+            });
             
             setStyle(intro, {
                 "opacity": "1",
@@ -59,6 +64,8 @@
             preTitle.style.top = "";
             intro.style.opacity = "";
             intro.style.transition = "1s";
+            navMain.style.opacity = "";
+            navMain.style.transition = "1s";
         }
 
     })
