@@ -9,7 +9,10 @@
     background-color: white; //remove this?
     position: fixed;
     height: var(--border);
-    left: var(--border);
-    right: var(--border);
+    left: 0;
+    right: 0;
+    padding: 0 var(--border);
+    // left: var(--border);
+    // right: var(--border);
     z-index: 5;
 }

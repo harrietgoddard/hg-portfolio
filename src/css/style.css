@@ -80,7 +80,7 @@ a {
     color: var(--red); }
 
 .nav-link:hover {
-  color: var(--red);
+  color: var(--teal);
   transition: 0.2s; }
 
 .pre-title {
@@ -247,8 +247,9 @@ input[type=submit]:active {
   background-color: white;
   position: fixed;
   height: var(--border);
-  left: var(--border);
-  right: var(--border);
+  left: 0;
+  right: 0;
+  padding: 0 var(--border);
   z-index: 5; }
 
 .wrapper {
@@ -318,3 +319,7 @@ body:after {
     transform: translateX(-1em); }
   100% {
     transform: translateX(0); } }
+
+.skills {
+  height: 80vh;
+  background-color: #b8b4b4; }
