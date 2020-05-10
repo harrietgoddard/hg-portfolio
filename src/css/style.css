@@ -248,6 +248,9 @@ input[type=submit]:active {
 .nav-link {
   margin-left: 1em; }
 
+.nav-main {
+  opacity: 0; }
+
 .header-main {
   display: flex;
   justify-content: space-between;

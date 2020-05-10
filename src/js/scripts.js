@@ -9,6 +9,7 @@
     let mainTitle = d.getElementById("mainTitle");
     let intro = d.getElementById("intro");
     let scroll = d.getElementById("scroll");
+    let navMain = d.getElementById("navMain");
 
     let setStyle = (element, propertyObject) => {
         for (property in propertyObject) {
@@ -38,6 +39,11 @@
                 "right": "calc(0.17 * var(--border))",
                 "transition" : "right 1s"
             });
+
+            setStyle(navMain, {
+                "opacity": "1",
+                "transition": "opacity 1s 2s"
+            });
             
             setStyle(intro, {
                 "opacity": "1",
@@ -58,6 +64,8 @@
             preTitle.style.top = "";
             intro.style.opacity = "";
             intro.style.transition = "1s";
+            navMain.style.opacity = "";
+            navMain.style.transition = "1s";
         }
 
     })
@@ -85,8 +93,8 @@
     })
 
     //scroll to top of page on reload
-    w.addEventListener("beforeunload", () => {
-        w.scrollTo(0,0);
-    })
+    window.onbeforeunload = () => {
+        window.scrollTo(0, 0);
+    }
 
 })(document, window);
