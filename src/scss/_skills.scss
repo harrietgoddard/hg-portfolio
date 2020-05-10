@@ -1,4 +1,7 @@
 .skills { //remove this
-    height: 100vh;
-    background-color: rgb(184, 180, 180);
+    height: calc(100vh - var(--border) * 2);
+    background-image: url("../images/computer-screen.jpg");
+    background-size: cover;
+    background-color: var(--darkGray);
+    background-blend-mode: soft-light;
 }
