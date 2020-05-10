@@ -65,6 +65,11 @@ a {
 * {
   box-sizing: border-box; }
 
+.shift-anchor {
+  display: block;
+  position: relative;
+  top: calc(var(--border) * -1); }
+
 .main-font, .main-title, .skills-title, .projects-title, .contact-title {
   font-family: var(--fontMain);
   text-transform: uppercase;

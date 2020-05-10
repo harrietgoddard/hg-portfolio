@@ -31,3 +31,10 @@
     box-sizing: border-box;
 }
 
+//move down the page sections by the border height when clicking on nav links
+.shift-anchor {
+    display: block;
+	position: relative;
+	top: calc(var(--border) * -1);
+}
+
