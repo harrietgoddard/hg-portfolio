@@ -334,3 +334,14 @@ body:after {
 
 .skills-title {
   display: inline-block; }
+
+.projects {
+  height: 100vh;
+  background-color: var(--offWhite); }
+  .projects header {
+    display: flex;
+    justify-content: center;
+    padding-top: 10vh; }
+
+.project-title {
+  display: inline-block; }
