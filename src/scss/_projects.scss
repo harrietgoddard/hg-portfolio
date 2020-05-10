@@ -1,0 +1,14 @@
+.projects {
+    height: 100vh;
+    background-color: var(--offWhite);
+
+    header {
+        display: flex;
+        justify-content: center;
+        padding-top: 10vh;
+    }
+}
+
+.project-title {
+    display: inline-block;
+}

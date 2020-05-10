@@ -67,20 +67,20 @@
         let trigger = hero.scrollHeight - w.innerHeight + header.scrollHeight;
         //increase in window pageYOffset beyond trigger point, as a proportion of the window height
         let offset = (w.pageYOffset - trigger) / w.innerHeight;
-        //amount by which to reduce the top percentage
-        let change = 50 - (offset * 100);
+        //amount by which to reduce the top percentage. 0.75 slows for parallax effect
+        let change = 50 - (offset * 100 * 0.75);
+
         if(w.pageYOffset > trigger) {
             mainTitle.style.top = `${change}%`;
-            mainTitle.style.transition = "top 0s linear"; //to mimic a scroll effect
 
             intro.style.top = `${change}%`;
-            intro.style.transition = "top 0s linear";
 
             scroll.style.display = "none";
 
         } else {
             mainTitle.style.top = "";
             intro.style.top = "";
+            scroll.style.display = "inline-block";
         }
     })
 

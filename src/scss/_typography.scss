@@ -46,7 +46,6 @@
 
 @mixin skillsText($fontSize) {
     font-family: var(--fontAlt);
-    color: var(--offWhite);
     line-height: 3rem;
     font-size: $fontSize;
 }
@@ -165,11 +164,13 @@
 
 .skills-card-title {
     @include skillsText(1.8rem);
+    color: var(--offWhite);
     font-weight: 500;
 }
 
 .skills-listitem {
     @include skillsText(1.3rem);
+    color: var(--lightGray);
 }
 
 //form labels

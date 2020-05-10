@@ -8,6 +8,8 @@
     --offWhite: #f8f8f8;
     --red: orangered;
     --gray: rgb(75, 73, 73);
+    --lightGray: rgb(199, 195, 195);
+    --darkGray: rgb(49, 48, 48);
 
     //fonts
 
@@ -20,6 +22,7 @@
 }
 
 .components {
+    height: 300vh;
     background-color: rgb(184, 180, 180);
     padding: 30px;
 }

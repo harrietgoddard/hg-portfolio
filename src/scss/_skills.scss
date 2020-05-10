@@ -1,4 +1,41 @@
-.skills { //remove this
-    height: 80vh;
-    background-color: rgb(184, 180, 180);
+.skills {
+    height: calc(100vh - var(--border) * 2);
+    background-image: url("../images/computer-screen.jpg");
+    background-size: cover;
+    background-color: var(--darkGray);
+    background-blend-mode: soft-light;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10vh 20vh 15vh;
+
+    header { 
+        display: flex;
+        justify-content: center;
+        // padding-top: 10vh;
+    }
+}
+
+.skills-title {
+    display: inline-block;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+    // padding: 19vh 8vw;
+}
+
+.skills-card {
+    display: inline-block;
+    position: relative;
+}
+
+.skills-card:before {
+    content: "";
+    border-left: 4px solid var(--red);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -30px;
 }
