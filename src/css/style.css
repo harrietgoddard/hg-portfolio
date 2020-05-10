@@ -365,7 +365,7 @@ body:after {
   left: -30px; }
 
 .projects {
-  height: 100vh;
+  height: 150vh;
   background-color: var(--offWhite); }
   .projects header {
     display: flex;
@@ -373,4 +373,25 @@ body:after {
     padding-top: 10vh; }
 
 .project-title {
+  display: inline-block; }
+
+.contact {
+  background-color: var(--teal);
+  height: 75vh;
+  position: relative; }
+  .contact header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../images/phone.jpg");
+    background-size: cover;
+    background-color: var(--gray);
+    background-blend-mode: soft-light;
+    position: absolute;
+    top: 0;
+    bottom: var(--border);
+    left: 0;
+    width: 50%; }
+
+.contact-title {
   display: inline-block; }
