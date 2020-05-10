@@ -202,7 +202,7 @@ label {
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   color: black;
-  font-size: 0.8rem; }
+  font-size: 0.9rem; }
   .copyright span {
     font-weight: 900;
     font-size: 1.4rem;
@@ -377,7 +377,7 @@ body:after {
 
 .contact {
   background-color: var(--teal);
-  height: 75vh;
+  height: 60vh;
   position: relative; }
   .contact header {
     display: flex;
@@ -389,9 +389,19 @@ body:after {
     background-blend-mode: soft-light;
     position: absolute;
     top: 0;
-    bottom: var(--border);
+    bottom: 0;
     left: 0;
     width: 50%; }
 
 .contact-title {
   display: inline-block; }
+
+footer {
+  height: calc((100vh - 60vh - (var(--border) * 2)) / 2 + var(--border));
+  background-color: var(--offWhite);
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.copyright {
+  margin-bottom: var(--border); }
