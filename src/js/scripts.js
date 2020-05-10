@@ -68,12 +68,16 @@
 
             intro.style.top = `${change}%`;
             intro.style.transition = "top 0s linear";
+
+            scroll.style.display = "none";
         } else if (window.pageYOffset > window.innerHeight) {
             mainTitle.style.top = "50%";
             mainTitle.style.transition = "top 0s linear";
 
             intro.style.top = "50%";
             intro.style.transition = "top 0s linear";
+
+            scroll.style.display = "inline-block";
         }
     })
 
