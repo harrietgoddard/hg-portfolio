@@ -1,0 +1,12 @@
+footer {
+    // height: 20vh;
+    height: calc((100vh - 60vh - (var(--border) * 2)) / 2 + var(--border));
+    background-color: var(--offWhite);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright {
+    margin-bottom: var(--border);
+}
