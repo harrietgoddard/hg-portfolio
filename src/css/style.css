@@ -269,7 +269,12 @@ input[type=submit]:active {
 
 @media screen and (max-width: 768px) {
   .header-main {
-    display: none; } }
+    background-color: transparent;
+    padding-top: 2.5em; }
+  .nav-main {
+    display: none; }
+  .logo {
+    width: 50%; } }
 
 .wrapper {
   margin: 0 var(--border); }
@@ -352,7 +357,11 @@ body:after {
     width: 50%;
     height: 300vh; }
   .main-title {
-    white-space: nowrap; } }
+    white-space: nowrap; }
+  .pre-title {
+    top: 18%; }
+  .scroll {
+    top: 78%; } }
 
 .skills {
   height: calc(100vh - var(--border) * 2);

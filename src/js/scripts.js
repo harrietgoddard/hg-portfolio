@@ -42,7 +42,7 @@
             }
 
             setStyle(preTitle, {
-                "top": "-5%",
+                "top": "-10%",
                 "transition" : "top 1s",
             });
 
