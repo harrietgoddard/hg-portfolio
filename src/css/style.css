@@ -340,7 +340,7 @@ body:after {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 10vh 20vh 15vh; }
+  padding: 10vh 15vh 15vh; }
   .skills header {
     display: flex;
     justify-content: center; }
@@ -358,11 +358,11 @@ body:after {
 
 .skills-card:before {
   content: "";
-  border-left: 4px solid var(--red);
+  border-top: 4px solid var(--red);
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: -30px; }
+  left: 0;
+  right: 0;
+  top: -10px; }
 
 .projects {
   height: 150vh;
