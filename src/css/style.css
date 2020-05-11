@@ -72,7 +72,7 @@ a {
 
 @media screen and (max-width: 768px) {
   :root {
-    font-size: 75%; } }
+    font-size: 80%; } }
 
 .main-font, .main-title, .skills-title, .projects-title, .contact-title {
   font-family: var(--fontMain);
@@ -349,7 +349,10 @@ body:after {
   .wiper {
     top: 0;
     left: 0;
-    width: 50%; } }
+    width: 50%;
+    height: 300vh; }
+  .main-title {
+    white-space: nowrap; } }
 
 .skills {
   height: calc(100vh - var(--border) * 2);
@@ -383,6 +386,10 @@ body:after {
   left: 0;
   right: 0;
   top: -10px; }
+
+@media screen and (max-width: 768px) {
+  .skills-card {
+    display: none; } }
 
 .projects {
   height: 150vh;

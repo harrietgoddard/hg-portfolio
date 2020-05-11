@@ -38,4 +38,13 @@
     left: 0;
     right: 0;
     top: -10px;
-} 
+}
+
+@media screen and (max-width: 768px) {
+
+    //remove this - for hero testing purposes only
+    .skills-card {
+        display: none;
+    }
+
+}
