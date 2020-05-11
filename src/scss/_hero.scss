@@ -63,3 +63,13 @@
     50%  { transform: translateX(-1em); }
     100% { transform: translateX(0); }
 }
+
+@media screen and (max-width: 768px) {
+
+    .wiper {
+        top: 0;
+        left: 0;
+        width: 50%;
+    }
+
+}

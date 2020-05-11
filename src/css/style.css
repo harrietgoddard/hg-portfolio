@@ -70,6 +70,10 @@ a {
   position: relative;
   top: calc(var(--border) * -1); }
 
+@media screen and (max-width: 768px) {
+  :root {
+    font-size: 75%; } }
+
 .main-font, .main-title, .skills-title, .projects-title, .contact-title {
   font-family: var(--fontMain);
   text-transform: uppercase;
@@ -263,6 +267,10 @@ input[type=submit]:active {
   padding: 0 var(--border);
   z-index: 5; }
 
+@media screen and (max-width: 768px) {
+  .header-main {
+    display: none; } }
+
 .wrapper {
   margin: 0 var(--border); }
 
@@ -274,6 +282,12 @@ body:after {
   bottom: 0;
   height: var(--border);
   background-color: white; }
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    margin: 0; }
+  body:after {
+    display: none; } }
 
 .hero {
   height: 300vh;
@@ -330,6 +344,12 @@ body:after {
     transform: translateX(-1em); }
   100% {
     transform: translateX(0); } }
+
+@media screen and (max-width: 768px) {
+  .wiper {
+    top: 0;
+    left: 0;
+    width: 50%; } }
 
 .skills {
   height: calc(100vh - var(--border) * 2);

@@ -25,10 +25,21 @@
 
         if(w.pageYOffset > 0) {
 
-            setStyle(wiper, {
-                "width": "calc(100% - 2 * var(--border)",
-                "transition": "width 1.10s",
-            });
+            if(screen.width > 768) {
+
+                setStyle(wiper, {
+                    "width": "calc(100% - 2 * var(--border)",
+                    "transition": "width 1.10s",
+                });
+
+            } else {
+
+                setStyle(wiper, {
+                    "width": "calc(100% - var(--border)",
+                    "transition": "width 1.10s",
+                });
+
+            }
 
             setStyle(preTitle, {
                 "top": "-5%",
