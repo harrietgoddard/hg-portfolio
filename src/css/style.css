@@ -352,18 +352,20 @@ body:after {
 
 @media screen and (max-width: 768px) {
   .hero {
-    height: 150vh; }
+    height: 120vh; }
   .wiper {
     top: 0;
     left: 0;
     width: 50%;
-    height: 150vh; }
+    height: 120vh; }
   .main-title {
     white-space: nowrap; }
   .intro {
     font-size: 1rem;
     line-height: 1.5rem;
-    right: 20%; } }
+    position: absolute;
+    top: 85%;
+    right: 10%; } }
 
 .skills {
   height: calc(100vh - var(--border) * 2);

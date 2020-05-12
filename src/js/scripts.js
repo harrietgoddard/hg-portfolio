@@ -93,7 +93,9 @@
         if(w.pageYOffset > trigger) {
             mainTitle.style.top = `${change}%`;
 
-            intro.style.top = `${introChange}%`;
+            if (screen.width > 768) {
+                intro.style.top = `${introChange}%`;
+            }
 
             scroll.style.display = "none";
 
