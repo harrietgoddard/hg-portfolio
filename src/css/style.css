@@ -362,7 +362,8 @@ body:after {
     white-space: nowrap; }
   .intro {
     font-size: 1rem;
-    line-height: 1.5rem; } }
+    line-height: 1.5rem;
+    right: 20%; } }
 
 .skills {
   height: calc(100vh - var(--border) * 2);
@@ -442,3 +443,9 @@ footer {
 
 .copyright {
   margin-bottom: var(--border); }
+
+@media screen and (max-width: 768px) {
+  footer {
+    height: 10vh; }
+  .copyright {
+    margin-bottom: 0; } }

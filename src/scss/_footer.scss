@@ -10,3 +10,13 @@ footer {
 .copyright {
     margin-bottom: var(--border);
 }
+
+@media screen and (max-width: 768px) {
+    footer {
+        height: 10vh;
+    }
+
+    .copyright {
+        margin-bottom: 0;
+    }
+}
