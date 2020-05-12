@@ -351,17 +351,18 @@ body:after {
     transform: translateX(0); } }
 
 @media screen and (max-width: 768px) {
+  .hero {
+    height: 150vh; }
   .wiper {
     top: 0;
     left: 0;
     width: 50%;
-    height: 300vh; }
+    height: 150vh; }
   .main-title {
     white-space: nowrap; }
-  .pre-title {
-    top: 18%; }
-  .scroll {
-    top: 78%; } }
+  .intro {
+    font-size: 1rem;
+    line-height: 1.5rem; } }
 
 .skills {
   height: calc(100vh - var(--border) * 2);
