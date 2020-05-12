@@ -25,13 +25,24 @@
 
         if(w.pageYOffset > 0) {
 
-            setStyle(wiper, {
-                "width": "calc(100% - 2 * var(--border)",
-                "transition": "width 1.10s",
-            });
+            if(screen.width > 768) {
+
+                setStyle(wiper, {
+                    "width": "calc(100% - 2 * var(--border)",
+                    "transition": "width 1.10s",
+                });
+
+            } else {
+
+                setStyle(wiper, {
+                    "width": "calc(100% - var(--border)",
+                    "transition": "width 1.10s",
+                });
+
+            }
 
             setStyle(preTitle, {
-                "top": "-5%",
+                "top": "-10%",
                 "transition" : "top 1s",
             });
 
@@ -72,16 +83,17 @@
     
     w.addEventListener("scroll", () => {
         //window pageYOffset point at which bottom of hero comes into viewport (adjusted for border height)
-        let trigger = hero.scrollHeight - w.innerHeight + header.scrollHeight;
+        let trigger = screen.width > 768 ? hero.scrollHeight - w.innerHeight + header.scrollHeight : 0;
         //increase in window pageYOffset beyond trigger point, as a proportion of the window height
         let offset = (w.pageYOffset - trigger) / w.innerHeight;
         //amount by which to reduce the top percentage. 0.75 slows for parallax effect
         let change = 50 - (offset * 100 * 0.75);
+        let introChange = screen.width > 768 ? change : 50 + change;
 
         if(w.pageYOffset > trigger) {
             mainTitle.style.top = `${change}%`;
 
-            intro.style.top = `${change}%`;
+            intro.style.top = `${introChange}%`;
 
             scroll.style.display = "none";
 

@@ -20,3 +20,20 @@
     // right: var(--border);
     z-index: 5;
 }
+
+@media screen and (max-width: 768px) {
+
+    .header-main {
+        background-color: transparent;
+        padding-top: 2.5em;
+    }
+
+    .nav-main {
+        display: none;
+    }
+
+    .logo {
+        width: 50%;
+    }
+
+}

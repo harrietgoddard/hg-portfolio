@@ -70,6 +70,10 @@ a {
   position: relative;
   top: calc(var(--border) * -1); }
 
+@media screen and (max-width: 768px) {
+  :root {
+    font-size: 80%; } }
+
 .main-font, .main-title, .skills-title, .projects-title, .contact-title {
   font-family: var(--fontMain);
   text-transform: uppercase;
@@ -263,6 +267,15 @@ input[type=submit]:active {
   padding: 0 var(--border);
   z-index: 5; }
 
+@media screen and (max-width: 768px) {
+  .header-main {
+    background-color: transparent;
+    padding-top: 2.5em; }
+  .nav-main {
+    display: none; }
+  .logo {
+    width: 50%; } }
+
 .wrapper {
   margin: 0 var(--border); }
 
@@ -274,6 +287,12 @@ body:after {
   bottom: 0;
   height: var(--border);
   background-color: white; }
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    margin: 0; }
+  body:after {
+    display: none; } }
 
 .hero {
   height: 300vh;
@@ -331,6 +350,21 @@ body:after {
   100% {
     transform: translateX(0); } }
 
+@media screen and (max-width: 768px) {
+  .hero {
+    height: 150vh; }
+  .wiper {
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 150vh; }
+  .main-title {
+    white-space: nowrap; }
+  .intro {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    right: 20%; } }
+
 .skills {
   height: calc(100vh - var(--border) * 2);
   background-image: url("../images/computer-screen.jpg");
@@ -363,6 +397,10 @@ body:after {
   left: 0;
   right: 0;
   top: -10px; }
+
+@media screen and (max-width: 768px) {
+  .skills-card {
+    display: none; } }
 
 .projects {
   height: 150vh;
@@ -405,3 +443,9 @@ footer {
 
 .copyright {
   margin-bottom: var(--border); }
+
+@media screen and (max-width: 768px) {
+  footer {
+    height: 10vh; }
+  .copyright {
+    margin-bottom: 0; } }

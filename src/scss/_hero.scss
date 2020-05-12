@@ -63,3 +63,36 @@
     50%  { transform: translateX(-1em); }
     100% { transform: translateX(0); }
 }
+
+@media screen and (max-width: 768px) {
+
+    .hero {
+        height: 150vh;
+    }
+    
+    .wiper {
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 150vh;
+    }
+
+    .main-title {
+        white-space: nowrap;
+    }
+
+    .intro {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        right: 20%;
+    }
+
+    // .pre-title {
+    //     top: 18%;
+    // }
+
+    // .scroll {
+    //     top: 78%;
+    // }
+
+}

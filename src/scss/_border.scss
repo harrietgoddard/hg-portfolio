@@ -11,3 +11,15 @@ body:after {
     height: var(--border);
     background-color: white; //remove this?
 }
+
+@media screen and (max-width: 768px) {
+
+    .wrapper {
+        margin: 0;
+    }
+
+    body:after {
+        display: none;
+    }
+
+}
