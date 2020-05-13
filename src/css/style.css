@@ -274,7 +274,7 @@ input[type=submit]:active {
   .nav-main {
     display: none; }
   .logo {
-    width: 50%; } }
+    width: 20vw; } }
 
 .wrapper {
   margin: 0 var(--border); }
@@ -359,16 +359,7 @@ body:after {
     width: 50%;
     height: 120vh; }
   .main-title {
-    white-space: nowrap;
-    position: absolute;
-    top: 40%;
-    right: 0; }
-  .intro {
-    font-size: 1rem;
-    line-height: 1.5rem;
-    position: absolute;
-    top: 80%;
-    right: 10%; } }
+    white-space: nowrap; } }
 
 .skills {
   height: calc(100vh - var(--border) * 2);
