@@ -359,7 +359,13 @@ body:after {
     width: 50%;
     height: 120vh; }
   .main-title {
-    white-space: nowrap; } }
+    white-space: nowrap; }
+  .intro {
+    font-size: 1rem;
+    line-height: 1.3rem;
+    top: 80%;
+    left: 10%;
+    right: 20%; } }
 
 .skills {
   height: calc(100vh - var(--border) * 2);
