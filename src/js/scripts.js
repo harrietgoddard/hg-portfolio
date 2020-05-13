@@ -32,6 +32,11 @@
                     "transition": "width 1.10s",
                 });
 
+                setStyle(mainTitle, {
+                    "right": "calc(0.17 * var(--border))",
+                    "transition" : "right 1s"
+                });
+
             } else {
 
                 setStyle(wiper, {
@@ -44,11 +49,6 @@
             setStyle(preTitle, {
                 "top": "-10%",
                 "transition" : "top 1s",
-            });
-
-            setStyle(mainTitle, {
-                "right": "calc(0.17 * var(--border))",
-                "transition" : "right 1s"
             });
 
             setStyle(navMain, {
@@ -91,9 +91,9 @@
         let introChange = screen.width > 768 ? change : 50 + change;
 
         if(w.pageYOffset > trigger) {
-            mainTitle.style.top = `${change}%`;
-
+            
             if (screen.width > 768) {
+                mainTitle.style.top = `${change}%`;
                 intro.style.top = `${introChange}%`;
             }
 
