@@ -270,7 +270,8 @@ input[type=submit]:active {
 @media screen and (max-width: 768px) {
   .header-main {
     background-color: transparent;
-    padding-top: 2.5em; }
+    padding-top: 2.5em;
+    padding-left: 1.5em; }
   .nav-main {
     display: none; }
   .logo {
@@ -352,20 +353,37 @@ body:after {
 
 @media screen and (max-width: 768px) {
   .hero {
-    height: 120vh; }
+    height: 750px;
+    overflow: hidden;
+    position: relative; }
   .wiper {
+    height: 750px;
     top: 0;
-    left: 0;
-    width: 50%;
-    height: 120vh; }
+    left: -50%;
+    width: 100%; }
   .main-title {
-    white-space: nowrap; }
+    white-space: nowrap;
+    position: absolute;
+    top: 40%;
+    right: 0;
+    overflow: hidden; }
+  .pre-title {
+    position: absolute;
+    top: 13%;
+    right: 2%; }
+  .scroll {
+    display: none; }
   .intro {
-    font-size: 1rem;
-    line-height: 1.3rem;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    position: absolute;
     top: 80%;
-    left: 10%;
-    right: 20%; } }
+    left: 20%;
+    right: 5%; }
+  .main-title-bottom {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip; } }
 
 .skills {
   height: calc(100vh - var(--border) * 2);
