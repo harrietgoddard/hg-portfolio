@@ -99,21 +99,16 @@
         
         if(d.body.clientWidth > 768 ) {
             //window pageYOffset point at which bottom of hero comes into viewport (adjusted for border height)
-            let trigger = screen.width > 768 ? hero.scrollHeight - w.innerHeight + header.scrollHeight : hero.scrollHeight - w.innerHeight;
+            let trigger = hero.scrollHeight - w.innerHeight + header.scrollHeight;
             //increase in window pageYOffset beyond trigger point, as a proportion of the window height
             let offset = (w.pageYOffset - trigger) / w.innerHeight;
-            //amount by which to reduce the top percentage. 0.75 slows for parallax effect
-            let change = screen.width > 768 ? 50 - (offset * 100 * 0.77) : 50 - (offset * 100);
-            let introChange = screen.width > 768 ? 50 - (offset * 100 * 0.77) : 80 - (offset * 100);
-            // let introChange = screen.width > 768 ? change : 50 + change;
+            //amount by which to reduce the 'top' percentage. 0.77 slows for parallax effect
+            let change = 50 - (offset * 100 * 0.77);
 
             if(w.pageYOffset > trigger) {
                 
-                // if (screen.width > 768) {
-                    mainTitle.style.top = `${change}%`;
-                    intro.style.top = `${introChange}%`;
-                // }
-
+                mainTitle.style.top = `${change}%`;
+                intro.style.top = `${change}%`;
                 scroll.style.display = "none";
 
             } else {
@@ -124,17 +119,25 @@
         }
     })
 
+    //improve behaviour of hero animations/resets upon resize
     w.addEventListener("resize", () => {
         if (d.body.clientWidth < 768) {
+            mainTitle.style.top = "40%";
+            intro.style.top = "80%";
             scroll.style.display = "none";
+        } else {
+            wiper.style.transform = "";
+            mainTitle.style.top = "50%";
+            scroll.style.display = "inline-block";
         }
     })
 
     //scroll to top of page on reload
-    window.onbeforeunload = () => {
-        window.scrollTo(0, 0);
+    w.onbeforeunload = () => {
+        w.scrollTo(0, 0);
     }
 
+    //smooth hero transition on mobile
     w.addEventListener("touchmove", () => {
         if(w.pageYOffset > 0) {
             setStyle(wiper, {
