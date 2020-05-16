@@ -9,6 +9,7 @@
     let intro = d.getElementById("intro");
     let scroll = d.getElementById("scroll");
     let navMain = d.getElementById("navMain");
+    let hamburger = d.getElementById("hamburger");
 
     //sets css styling on elements
     let setStyle = (element, propertyObject) => {
@@ -147,6 +148,40 @@
         } else {
             wiper.style.transform = "";
         }
+    })
+
+    //nav toggle
+    let navHidden = true;
+
+    let toggleNav = e => {
+        e.preventDefault();
+        if(navHidden) {
+            navMain.classList.add("nav-toggled");
+            navMain.classList.remove("nav-hide");
+        } else {
+            navMain.classList.remove("nav-toggled");
+            navMain.classList.add("nav-hide");
+        }
+        navHidden = !navHidden;
+    }
+
+    hamburger.addEventListener("click", toggleNav);
+    hamburger.addEventListener("touchstart", toggleNav);
+
+    navMain.addEventListener("click", e => {
+        let clicked = e.target;
+        if(clicked.matches("a")) {
+            navMain.classList.add("nav-hide");
+        }
+        navHidden = !navHidden;
+    })
+
+    w.addEventListener("resize", () => {
+        if(!navHidden) {
+            navMain.classList.remove("nav-toggled");
+            navMain.classList.add("nav-hide");
+        };
+        navHidden = !navHidden;
     })
 
 })(document, window);
