@@ -25,7 +25,7 @@
 
         if(w.pageYOffset > 0) {
 
-            if(screen.width > 768) {
+            if(d.body.clientWidth > 768) {
 
                 setStyle(wiper, {
                     "width": "calc(100% - 2 * var(--border)",
@@ -107,7 +107,7 @@
     
     w.addEventListener("scroll", () => {
         
-        if(screen.width > 768 ) {
+        if(d.body.clientWidth > 768 ) {
             //window pageYOffset point at which bottom of hero comes into viewport (adjusted for border height)
             let trigger = screen.width > 768 ? hero.scrollHeight - w.innerHeight + header.scrollHeight : hero.scrollHeight - w.innerHeight;
             //increase in window pageYOffset beyond trigger point, as a proportion of the window height
@@ -135,7 +135,7 @@
     })
 
     w.addEventListener("resize", () => {
-        if (screen.width < 768) {
+        if (d.body.clientWidth < 768) {
             scroll.style.display = "none";
         }
     })
