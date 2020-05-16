@@ -46,7 +46,7 @@
 
 @mixin skillsText($fontSize) {
     font-family: var(--fontAlt);
-    line-height: 3rem;
+    line-height: 2.5rem;
     font-size: $fontSize;
 }
 
@@ -169,7 +169,7 @@
 }
 
 .skills-listitem {
-    @include skillsText(1.3rem);
+    @include skillsText(1.2rem);
     color: var(--lightGray);
 }
 

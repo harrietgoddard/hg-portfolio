@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@600;700&family=Roboto:wght@400;500;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@600;700&family=Roboto:wght@400;500;900&family=Libre+Baskerville:ital@1&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -181,15 +181,15 @@ a {
 
 .skills-card-title {
   font-family: var(--fontAlt);
-  line-height: 3rem;
+  line-height: 2.5rem;
   font-size: 1.8rem;
   color: var(--offWhite);
   font-weight: 500; }
 
 .skills-listitem {
   font-family: var(--fontAlt);
-  line-height: 3rem;
-  font-size: 1.3rem;
+  line-height: 2.5rem;
+  font-size: 1.2rem;
   color: var(--lightGray); }
 
 label {
@@ -427,28 +427,27 @@ body:after {
   display: inline-block;
   position: relative; }
 
-.skills-card:before {
-  content: "";
-  border-top: 4px solid var(--red);
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: -10px; }
+.skills-card-title {
+  font-family: 'libre baskerville';
+  margin-bottom: 15px; }
+  .skills-card-title span {
+    color: var(--red);
+    margin-left: 5px;
+    font-size: 2rem; }
 
 @media screen and (max-width: 768px) {
   .skills {
-    padding-left: 15vw;
-    padding-right: 15vw;
+    padding: 65px 15vw;
     height: auto; }
     .skills header {
       justify-content: start;
       margin-bottom: 5em; }
   .skills-container {
     flex-direction: column;
-    height: 450px; }
+    height: 650px; }
   .skills-listitem {
     font-size: 1.2rem;
-    line-height: 2rem; } }
+    line-height: 2.5rem; } }
 
 .projects {
   height: 150vh;
