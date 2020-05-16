@@ -67,10 +67,9 @@
 @media screen and (max-width: 768px) {
 
     .hero {
-        // height: 120vh;
         height: 750px;
         overflow: hidden;
-        position: relative;
+        position: relative; //for overflow hidden to work
     }
     
     .wiper {
@@ -78,7 +77,6 @@
         top: 0;
         left: -50%;
         width: 100%;
-        // height: 120vh;
     }
 
     .main-title {
@@ -86,17 +84,12 @@
         position: absolute;
         top: 40%;
         right: 0;
-        overflow: hidden;
     }
 
     .pre-title {
         position: absolute;
         top: 13%;
         right: 2%;
-    }
-
-    .scroll {
-        display: none;
     }
 
     .intro {
@@ -108,26 +101,8 @@
         right: 5%;
     }
 
-    .main-title-bottom {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: clip;
+    .scroll {
+        display: none;
     }
-
-    // .intro {
-    //     font-size: 1rem;
-    //     line-height: 1.5rem;
-    //     position: absolute;
-    //     top: 80%;
-    //     right: 10%;
-    // }
-
-    // .pre-title {
-    //     top: 18%;
-    // }
-
-    // .scroll {
-    //     top: 78%;
-    // }
 
 }
