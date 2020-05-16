@@ -7,7 +7,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 10vh 15vh 15vh;
+    padding: 10vh 15vh 10vh; //change to vw where appropriate?
 
     header { 
         display: flex;
@@ -29,20 +29,59 @@
     position: relative;
 }
 
-.skills-card:before {
-    content: "";
-    border-top: 4px solid var(--red);
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: -10px;
+// .skills-card:before {
+//     content: "";
+//     border-top: 4px solid var(--red);
+//     position: absolute;
+//     left: 0;
+//     right: 0;
+//     top: -10px;
+// }
+
+.skills-card-title {
+    font-family: 'libre baskerville';
+    margin-bottom: 15px;
+
+    span {
+        color: var(--red);
+        margin-left: 5px;
+        font-size: 2rem;
+    }
 }
+
+// .skills-card-title:after {
+//     content: "";
+//     border-bottom: 4px solid var(--red);
+//     position: absolute;
+//     top: 45px;
+//     left: 0;
+//     right: 50px;
+// }
 
 @media screen and (max-width: 768px) {
 
-    //remove this - for hero testing purposes only
-    .skills-card {
-        display: none;
+    .skills {
+        // padding-top: 65px;
+        
+        // padding-left: 15vw;
+        // padding-right: 15vw;
+        padding: 65px 15vw;
+        height: auto;
+
+        header {
+            justify-content: start;
+            margin-bottom: 5em;
+        }
+    }
+
+    .skills-container {
+        flex-direction: column;
+        height: 650px;
+    }
+
+    .skills-listitem {
+        font-size: 1.2rem;
+        line-height: 2.5rem;
     }
 
 }
