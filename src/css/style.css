@@ -411,7 +411,7 @@ body:after {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 10vh 15vh 15vh; }
+  padding: 10vh 15vh 10vh; }
   .skills header {
     display: flex;
     justify-content: center; }
@@ -436,8 +436,19 @@ body:after {
   top: -10px; }
 
 @media screen and (max-width: 768px) {
-  .skills-card {
-    display: none; } }
+  .skills {
+    padding-left: 15vw;
+    padding-right: 15vw;
+    height: auto; }
+    .skills header {
+      justify-content: start;
+      margin-bottom: 5em; }
+  .skills-container {
+    flex-direction: column;
+    height: 450px; }
+  .skills-listitem {
+    font-size: 1.2rem;
+    line-height: 2rem; } }
 
 .projects {
   height: 150vh;
