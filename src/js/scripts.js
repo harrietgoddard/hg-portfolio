@@ -153,7 +153,8 @@
     //nav toggle
     let navHidden = true;
 
-    hamburger.addEventListener("click", () => {
+    let toggleNav = e => {
+        e.preventDefault();
         if(navHidden) {
             navMain.classList.add("nav-toggled");
             navMain.classList.remove("nav-hide");
@@ -162,8 +163,10 @@
             navMain.classList.add("nav-hide");
         }
         navHidden = !navHidden;
-        console.log(navHidden);
-    })
+    }
+
+    hamburger.addEventListener("click", toggleNav);
+    hamburger.addEventListener("touchstart", toggleNav);
 
     navMain.addEventListener("click", e => {
         let clicked = e.target;

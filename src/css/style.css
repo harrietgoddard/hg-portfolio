@@ -72,7 +72,9 @@ a {
 
 @media screen and (max-width: 768px) {
   :root {
-    font-size: 80%; } }
+    font-size: 80%; }
+  .shift-anchor {
+    top: 0; } }
 
 .main-font, .main-title, .skills-title, .projects-title, .contact-title {
   font-family: var(--fontMain);
