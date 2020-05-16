@@ -1,7 +1,6 @@
 ((d,w) => {
 
-    console.log("hey haz javascript is working");
-
+    //elements
     let header = d.getElementById("header");
     let hero = d.getElementById("hero");
     let wiper = d.getElementById("wiper");
@@ -11,20 +10,24 @@
     let scroll = d.getElementById("scroll");
     let navMain = d.getElementById("navMain");
 
+    //sets css styling on elements
     let setStyle = (element, propertyObject) => {
         for (property in propertyObject) {
             element.style[property] = propertyObject[property];
         }
     }
 
-    let elastisize = (elements) => {
+    //sets transition styling for hero elements
+    let elastisize = elements => {
         elements.forEach(element => setStyle(element, {"transition-timing-function": "cubic-bezier(0.7, 0, 0.3, 1)"}));
     }
 
+    //animation on first scroll
     w.addEventListener("scroll", () => {
 
         if(w.pageYOffset > 0) {
 
+            //desktop
             if(d.body.clientWidth > 768) {
 
                 setStyle(wiper, {
@@ -46,13 +49,14 @@
                     "right": "calc(0.8 * var(--border))",
                     "transition" : "right 1s"
                 });
-            
-            } else {
 
-                // setStyle(wiper, {
-                //     "width": "calc(100% - var(--border)",
-                //     "transition": "width 1.10s",
-                // });
+                setStyle(navMain, {
+                    "opacity": "1",
+                    "transition": "opacity 1s 2s"
+                });
+            
+            //mobile
+            } else {
 
                 setStyle(wiper, {
                     "transform": "translateX(calc(50% - var(--border)))",
@@ -62,26 +66,11 @@
                 setStyle(preTitle, {
                     "opacity" : "0",
                     "transition" : "opacity 1s"
-                })
+                });
 
             }
 
-
-
-            // } else {
-
-                
-
-                // preTitle.style.display = "none";
-                // scroll.style.display = "none";
-
-            // }
-
-            setStyle(navMain, {
-                "opacity": "1",
-                "transition": "opacity 1s 2s"
-            });
-            
+            //desktop and mobile            
             setStyle(intro, {
                 "opacity": "1",
                 "transition" : "opacity 1s 1s"
@@ -90,7 +79,9 @@
             elastisize([wiper, mainTitle, preTitle, scroll]);
 
         } else {
+            //reset
             wiper.style.width = "";
+            wiper.style.transform = "";
             mainTitle.style.right = "";
             scroll.style.right = "";
             preTitle.style.top = "";
@@ -99,12 +90,11 @@
             intro.style.transition = "1s";
             navMain.style.opacity = "";
             navMain.style.transition = "1s";
-
-            wiper.style.transform = "";
         }
 
     })
     
+    //mainTitle and intro parallax scrolling (on desktop)
     w.addEventListener("scroll", () => {
         
         if(d.body.clientWidth > 768 ) {
