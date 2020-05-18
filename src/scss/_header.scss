@@ -22,7 +22,7 @@
 .nav-toggled {
     display: flex;
     flex-direction: column;
-    position: absolute;
+    position: fixed;
     right: 1.5em;
     top: 5em;
     opacity: 1;
