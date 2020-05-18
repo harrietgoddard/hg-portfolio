@@ -493,6 +493,17 @@ body:after {
 .contact-title {
   display: inline-block; }
 
+@media screen and (max-width: 768px) {
+  .contact {
+    height: 500px; }
+    .contact header {
+      position: static;
+      display: block;
+      padding: 65px 15vw;
+      width: 100%; }
+  .contact-title {
+    display: block; } }
+
 footer {
   height: calc((100vh - 60vh - (var(--border) * 2)) / 2 + var(--border));
   background-color: var(--offWhite);
