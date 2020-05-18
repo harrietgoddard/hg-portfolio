@@ -289,6 +289,7 @@ input[type=submit]:active {
 @media screen and (max-width: 768px) {
   .header-main {
     background-color: transparent;
+    position: absolute;
     padding-top: 2.5em;
     padding-left: 1.5em;
     padding-right: 1.5em; }
@@ -297,7 +298,9 @@ input[type=submit]:active {
   .logo {
     width: 20vw; }
   .hamburger {
-    display: inline; } }
+    display: inline;
+    position: fixed;
+    right: 1.5em; } }
 
 .wrapper {
   margin: 0 var(--border); }
