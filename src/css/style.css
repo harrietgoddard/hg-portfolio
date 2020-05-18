@@ -516,6 +516,6 @@ footer {
 
 @media screen and (max-width: 768px) {
   footer {
-    height: 10vh; }
+    height: 70px; }
   .copyright {
     margin-bottom: 0; } }
