@@ -440,6 +440,7 @@ body:after {
 
 @media screen and (max-width: 768px) {
   .skills {
+    background-position-x: 55%;
     padding: 65px 15vw;
     height: auto; }
     .skills header {
