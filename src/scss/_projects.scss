@@ -12,3 +12,17 @@
 .project-title {
     display: inline-block;
 }
+
+@media screen and (max-width: 768px) {
+
+    .projects {
+        height: 800px; //probably change this when project cards are added
+        padding:65px 15vw;
+
+        header {
+            padding: 0;
+            justify-content: start;
+        }
+    }
+
+}

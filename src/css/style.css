@@ -464,6 +464,14 @@ body:after {
 .project-title {
   display: inline-block; }
 
+@media screen and (max-width: 768px) {
+  .projects {
+    height: 800px;
+    padding: 65px 15vw; }
+    .projects header {
+      padding: 0;
+      justify-content: start; } }
+
 .contact {
   background-color: var(--teal);
   height: 60vh;
