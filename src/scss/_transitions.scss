@@ -1,0 +1,16 @@
+//hero transitions - desktop
+.wiper-move-right {
+    width: calc(100% - 2 * var(--border));
+}
+
+.pre-title-move-up {
+    top: -10%;
+}
+
+.wiper-move-right-mobile {
+    transform: translateX(calc(50% - var(--border)));
+}
+
+.pre-title-fade {
+    opacity: 0;
+}
