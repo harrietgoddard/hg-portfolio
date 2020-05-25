@@ -12,49 +12,50 @@
 
     w.addEventListener("scroll", () => {
 
-        //desktop
-        if(d.body.clientWidth > 768) {
+        if(w.pageYOffset > 0) {
 
-            if(w.pageYOffset > 0) {
+            intro.style.opacity = "1";
+            intro.style.transition = "opacity 1s 1s";
+            
+            if (d.body.clientWidth > 768) {
 
+                //desktop only
                 wiper.classList.add("wiper-move-right");
                 preTitle.classList.add("pre-title-move-up");
                 mainTitle.classList.add("main-title-move-right");
                 scroll.classList.add("scroll-move-right");
                 navMain.style.opacity = "1";
                 navMain.style.transition = "opacity 1s 2s";
-                intro.style.opacity = "1";
-                intro.style.transition = "opacity 1s 1s";
 
             } else {
 
+                //mobile only
+                wiper.classList.add("wiper-move-right-mobile");
+                preTitle.classList.add("pre-title-fade");
+
+            }
+
+        //reset
+        } else {
+
+            intro.style.opacity = "0";
+            intro.style.transition = "1s";
+
+            if (d.body.clientWidth > 768) {
+
+                //desktop only
                 wiper.classList.remove("wiper-move-right");
                 preTitle.classList.remove("pre-title-move-up");
                 mainTitle.classList.remove("main-title-move-right");
                 scroll.classList.remove("scroll-move-right");
                 navMain.style.opacity = "0";
                 navMain.style.transition = "1s";
-                intro.style.opacity = "0";
-                intro.style.transition = "1s";
-
-            }
-
-        //mobile
-        } else {
-
-            if(w.pageYOffset > 0) {
-
-                wiper.classList.add("wiper-move-right-mobile");
-                preTitle.classList.add("pre-title-fade");
-                intro.style.opacity = "1";
-                intro.style.transition = "opacity 1s 1s";
 
             } else {
 
+                //mobile only
                 wiper.classList.remove("wiper-move-right-mobile");
                 preTitle.classList.remove("pre-title-fade");
-                intro.style.opacity = "0";
-                intro.style.transition = "1s";
 
             }
 
