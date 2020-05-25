@@ -16,22 +16,46 @@
         if(d.body.clientWidth > 768) {
 
             if(w.pageYOffset > 0) {
+
                 wiper.classList.add("wiper-move-right");
                 preTitle.classList.add("pre-title-move-up");
+                mainTitle.classList.add("main-title-move-right");
+                scroll.classList.add("scroll-move-right");
+                navMain.style.opacity = "1";
+                navMain.style.transition = "opacity 1s 2s";
+                intro.style.opacity = "1";
+                intro.style.transition = "opacity 1s 1s";
+
             } else {
+
                 wiper.classList.remove("wiper-move-right");
                 preTitle.classList.remove("pre-title-move-up");
+                mainTitle.classList.remove("main-title-move-right");
+                scroll.classList.remove("scroll-move-right");
+                navMain.style.opacity = "0";
+                navMain.style.transition = "1s";
+                intro.style.opacity = "0";
+                intro.style.transition = "1s";
+
             }
 
         //mobile
         } else {
 
             if(w.pageYOffset > 0) {
+
                 wiper.classList.add("wiper-move-right-mobile");
                 preTitle.classList.add("pre-title-fade");
+                intro.style.opacity = "1";
+                intro.style.transition = "opacity 1s 1s";
+
             } else {
+
                 wiper.classList.remove("wiper-move-right-mobile");
                 preTitle.classList.remove("pre-title-fade");
+                intro.style.opacity = "0";
+                intro.style.transition = "1s";
+
             }
 
         }
@@ -45,11 +69,15 @@
         if (d.body.clientWidth > 768) {
             wiper.classList.remove("wiper-move-right");
             preTitle.classList.remove("pre-title-move-up");
+            mainTitle.classList.remove("main-title-move-right");
+            scroll.classList.remove("scroll-move-right");
+            scroll.style.display = "inline-block"; //remove?
 
         //mobile
         } else {
             wiper.classList.remove("wiper-move-right-mobile");
             preTitle.classList.remove("pre-title-fade");
+            scroll.style.display = "none"; //remove?
         }
 
     })
@@ -85,25 +113,25 @@
                 //     "transition": "width 1.10s",
                 // });
 
-                setStyle(mainTitle, {
-                    "right": "calc(0.17 * var(--border))",
-                    "transition" : "right 1s"
-                });
+                // setStyle(mainTitle, {
+                //     "right": "calc(0.17 * var(--border))",
+                //     "transition" : "right 1s"
+                // });
 
                 // setStyle(preTitle, {
                 //     "top": "-10%",
                 //     "transition" : "top 1s",
                 // });
 
-                setStyle(scroll, {
-                    "right": "calc(0.8 * var(--border))",
-                    "transition" : "right 1s"
-                });
+                // setStyle(scroll, {
+                //     "right": "calc(0.8 * var(--border))",
+                //     "transition" : "right 1s"
+                // });
 
-                setStyle(navMain, {
-                    "opacity": "1",
-                    "transition": "opacity 1s 2s"
-                });
+                // setStyle(navMain, {
+                //     "opacity": "1",
+                //     "transition": "opacity 1s 2s"
+                // });
             
             //mobile
             } else {
@@ -121,25 +149,25 @@
             }
 
             //desktop and mobile            
-            setStyle(intro, {
-                "opacity": "1",
-                "transition" : "opacity 1s 1s"
-            });
+            // setStyle(intro, {
+            //     "opacity": "1",
+            //     "transition" : "opacity 1s 1s"
+            // });
 
-            elastisize([mainTitle, scroll]);
+            elastisize([]);
 
         } else {
             //reset
             // wiper.style.width = "";
             // wiper.style.transform = "";
-            mainTitle.style.right = "";
-            scroll.style.right = "";
+            // mainTitle.style.right = "";
+            // scroll.style.right = "";
             // preTitle.style.top = "";
             // preTitle.style.opacity = "";
-            intro.style.opacity = "";
-            intro.style.transition = "1s";
-            navMain.style.opacity = "";
-            navMain.style.transition = "1s";
+            // intro.style.opacity = "";
+            // intro.style.transition = "1s";
+            // navMain.style.opacity = "";
+            // navMain.style.transition = "1s";
         }
 
     })
@@ -172,13 +200,13 @@
     //improve behaviour of hero animations/resets upon resize
     w.addEventListener("resize", () => {
         if (d.body.clientWidth < 768) {
-            mainTitle.style.top = "40%";
-            intro.style.top = "80%";
-            scroll.style.display = "none";
+            // mainTitle.style.top = "40%";
+            // intro.style.top = "80%";
+            // scroll.style.display = "none";
         } else {
             // wiper.style.transform = "";
-            mainTitle.style.top = "50%";
-            scroll.style.display = "inline-block";
+            // mainTitle.style.top = "50%";
+            // scroll.style.display = "inline-block";
         }
     })
 
