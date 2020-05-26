@@ -1,5 +1,28 @@
 ((d,w) => {
 
+    //HELPER FUNCTIONS
+
+    //add styles
+    let setStyle = (element, propertyObject) => {
+        for (property in propertyObject) {
+            element.style[property] = propertyObject[property];
+        }
+    }
+
+    //add class
+    let addClass = elementAndClass => {
+        let element = elementAndClass[0];
+        let className = elementAndClass[1];
+        element.classList.add(className);
+    }
+
+    //remove class
+    let removeClass = elementAndClass => {
+        let element = elementAndClass[0];
+        let className = elementAndClass[1];
+        element.classList.remove(className);
+    }
+
     //HERO TRANSITIONS ON FIRST SCROLL
 
     //elements
@@ -10,52 +33,85 @@
     let scroll = d.getElementById("scroll");
     let navMain = d.getElementById("navMain");
 
+    //desktop transition classes
+    let desktopClasses = [
+        [wiper, "wiper-move-right"],
+        [preTitle, "pre-title-move-up"],
+        [mainTitle, "main-title-move-right"],
+        [scroll, "scroll-move-right"]
+    ]
+
+    //mobile transition classes
+    let mobileClasses = [
+        [wiper, "wiper-move-right-mobile"],
+        [preTitle, "pre-title-fade"]
+    ]
+
+    //note that opacity transitions have been added by manipulating the style property on the element object (as opposed to adding a class)
+
     w.addEventListener("scroll", () => {
 
         if(w.pageYOffset > 0) {
 
-            intro.style.opacity = "1";
-            intro.style.transition = "opacity 1s 1s";
-            
+            //desktop and mobile
+            setStyle(intro, {
+                "opacity": "1",
+                "transition" : "opacity 1s 1s"
+            });
+
             if (d.body.clientWidth > 768) {
 
                 //desktop only
-                wiper.classList.add("wiper-move-right");
-                preTitle.classList.add("pre-title-move-up");
-                mainTitle.classList.add("main-title-move-right");
-                scroll.classList.add("scroll-move-right");
-                navMain.style.opacity = "1";
-                navMain.style.transition = "opacity 1s 2s";
+                // wiper.classList.add("wiper-move-right");
+                // addClass( [wiper, "wiper-move-right"] );
+                // preTitle.classList.add("pre-title-move-up");
+                desktopClasses.forEach(addClass);
+                // mainTitle.classList.add("main-title-move-right");
+                // scroll.classList.add("scroll-move-right");
+                
+                setStyle(navMain, {
+                    "opacity": "1",
+                    "transition": "opacity 1s 2s"
+                });
 
             } else {
 
                 //mobile only
-                wiper.classList.add("wiper-move-right-mobile");
-                preTitle.classList.add("pre-title-fade");
+                // wiper.classList.add("wiper-move-right-mobile");
+                // preTitle.classList.add("pre-title-fade");
+                mobileClasses.forEach(addClass);
 
             }
 
-        //reset
+        //reset at top of page
         } else {
 
-            intro.style.opacity = "0";
-            intro.style.transition = "1s";
+            //desktop and mobile
+            setStyle(intro, {
+                "opacity": "0",
+                "transition" : "opacity 1s"
+            });
 
             if (d.body.clientWidth > 768) {
 
                 //desktop only
-                wiper.classList.remove("wiper-move-right");
-                preTitle.classList.remove("pre-title-move-up");
-                mainTitle.classList.remove("main-title-move-right");
-                scroll.classList.remove("scroll-move-right");
-                navMain.style.opacity = "0";
-                navMain.style.transition = "1s";
+                // wiper.classList.remove("wiper-move-right");
+                // preTitle.classList.remove("pre-title-move-up");
+                // mainTitle.classList.remove("main-title-move-right");
+                // scroll.classList.remove("scroll-move-right");
+                desktopClasses.forEach(removeClass);
+
+                setStyle(navMain, {
+                    "opacity": "0",
+                    "transition": "opacity 1s"
+                });
 
             } else {
 
                 //mobile only
-                wiper.classList.remove("wiper-move-right-mobile");
-                preTitle.classList.remove("pre-title-fade");
+                // wiper.classList.remove("wiper-move-right-mobile");
+                // preTitle.classList.remove("pre-title-fade");
+                mobileClasses.forEach(removeClass);
 
             }
 
@@ -66,35 +122,35 @@
     //reset hero transitions on resize
     w.addEventListener("resize", () => {
 
+        //desktop and mobile
+        intro.style.opacity = "0";
+
         //deskop
         if (d.body.clientWidth > 768) {
-            wiper.classList.remove("wiper-move-right");
-            preTitle.classList.remove("pre-title-move-up");
-            mainTitle.classList.remove("main-title-move-right");
-            scroll.classList.remove("scroll-move-right");
+            // wiper.classList.remove("wiper-move-right");
+            // preTitle.classList.remove("pre-title-move-up");
+            // mainTitle.classList.remove("main-title-move-right");
+            // scroll.classList.remove("scroll-move-right");
+            desktopClasses.forEach(removeClass);
             scroll.style.display = "inline-block"; //remove?
 
         //mobile
         } else {
-            wiper.classList.remove("wiper-move-right-mobile");
-            preTitle.classList.remove("pre-title-fade");
+            // wiper.classList.remove("wiper-move-right-mobile");
+            // preTitle.classList.remove("pre-title-fade");
+            mobileClasses.forEach(removeClass);
             scroll.style.display = "none"; //remove?
         }
 
     })
     
     //elements
-    let header = d.getElementById("header");
-    let hero = d.getElementById("hero");
     
-    let hamburger = d.getElementById("hamburger");
+    
+    
 
     //sets css styling on elements
-    let setStyle = (element, propertyObject) => {
-        for (property in propertyObject) {
-            element.style[property] = propertyObject[property];
-        }
-    }
+
 
     //sets transition styling for hero elements
     let elastisize = elements => {
@@ -173,14 +229,22 @@
 
     })
     
-    //mainTitle and intro parallax scrolling (on desktop)
+    //MAINTITLE & INTRO PARALLAX SCROLLING (DESKTOP)
+
+    //elements
+    let header = d.getElementById("header");
+    let hero = d.getElementById("hero");
+
     w.addEventListener("scroll", () => {
         
         if(d.body.clientWidth > 768 ) {
+
             //window pageYOffset point at which bottom of hero comes into viewport (adjusted for border height)
             let trigger = hero.scrollHeight - w.innerHeight + header.scrollHeight;
+
             //increase in window pageYOffset beyond trigger point, as a proportion of the window height
             let offset = (w.pageYOffset - trigger) / w.innerHeight;
+
             //amount by which to reduce the 'top' percentage. 0.77 slows for parallax effect
             let change = 50 - (offset * 100 * 0.77);
 
@@ -198,18 +262,25 @@
         }
     })
 
-    //improve behaviour of hero animations/resets upon resize
+    //reset mainTitle and intro on resize
     w.addEventListener("resize", () => {
-        if (d.body.clientWidth < 768) {
-            // mainTitle.style.top = "40%";
-            // intro.style.top = "80%";
-            // scroll.style.display = "none";
+        if (d.body.clientWidth > 768) {
+            mainTitle.style.top = "50%";
         } else {
-            // wiper.style.transform = "";
-            // mainTitle.style.top = "50%";
-            // scroll.style.display = "inline-block";
+            mainTitle.style.top = "40%";
+            intro.style.top = "80%";
         }
     })
+
+
+// if (d.body.clientWidth < 768) {
+    // mainTitle.style.top = "40%";
+    // intro.style.top = "80%";
+    // scroll.style.display = "none";
+// } else {
+    // wiper.style.transform = "";
+    // mainTitle.style.top = "50%";
+    // scroll.style.display = "inline-block"; 
 
     //scroll to top of page on reload
     w.onbeforeunload = () => {
@@ -228,7 +299,13 @@
     //     }
     // })
 
-    //nav toggle
+
+
+    //NAV TOGGLE (MOBILE)
+
+    //elements
+    let hamburger = d.getElementById("hamburger");
+
     let navHidden = true;
 
     let toggleNav = e => {
