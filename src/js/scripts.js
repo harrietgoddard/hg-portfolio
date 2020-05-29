@@ -47,7 +47,7 @@
         [preTitle, "pre-title-fade"]
     ]
 
-    //note in the event listener below that opacity transitions have been added by manipulating the style property on the element object (as opposed to adding a class)
+    //note in the event listener below that opacity transitions have been added by manipulating the style property on the element object (rather than adding a class)
 
     w.addEventListener("scroll", () => {
 
