@@ -1,0 +1,25 @@
+//hero transitions - desktop
+.wiper-move-right {
+    width: calc(100% - 2 * var(--border));
+}
+
+.pre-title-move-up {
+    top: -10%;
+}
+
+.main-title-move-right {
+    right: calc(0.17 * var(--border));
+}
+
+.scroll-move-right {
+    right: calc(0.8 * var(--border));
+}
+
+//hero transitions - mobile
+.wiper-move-right-mobile {
+    transform: translateX(calc(50% - var(--border)));
+}
+
+.pre-title-fade {
+    opacity: 0;
+}
