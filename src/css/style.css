@@ -180,10 +180,11 @@ a {
     font-family: sans-serif;
     color: var(--red); }
 
-.skills-card-title {
+.skills-card-title, .project-name {
   font-family: var(--fontAlt);
   line-height: 2.5rem;
   font-size: 1.8rem;
+  font-family: 'libre baskerville';
   color: var(--offWhite);
   font-weight: 500; }
 
@@ -192,6 +193,23 @@ a {
   line-height: 2.5rem;
   font-size: 1.2rem;
   color: var(--lightGray); }
+
+.project-card-title {
+  font-family: 'libre baskerville';
+  font-size: 2rem; }
+
+.project-name {
+  font-family: 'libre baskerville';
+  font-size: 1.8rem;
+  color: var(--offWhite);
+  font-weight: 500;
+  text-align: center; }
+
+.project-card-text {
+  font-family: var(--fontAlt);
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  color: var(--offWhite); }
 
 label {
   font-family: var(--fontAlt);
@@ -444,7 +462,6 @@ body:after {
   position: relative; }
 
 .skills-card-title {
-  font-family: 'libre baskerville';
   margin-bottom: 15px; }
   .skills-card-title span {
     color: var(--red);
@@ -467,15 +484,56 @@ body:after {
     line-height: 2.5rem; } }
 
 .projects {
-  height: 150vh;
-  background-color: var(--offWhite); }
+  background-color: var(--offWhite);
+  padding-bottom: 6rem; }
   .projects header {
     display: flex;
     justify-content: center;
     padding-top: 10vh; }
 
-.project-title {
+.projects-title {
   display: inline-block; }
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.project-card {
+  background-color: var(--teal);
+  width: 40%;
+  border-radius: 5px;
+  margin-top: 6rem; }
+
+.project-card-hero {
+  object-fit: contain;
+  width: 100%;
+  border-radius: 5px 5px 0 0; }
+
+.project-card-title {
+  margin-bottom: 15px;
+  border: 5px solid var(--teal);
+  background: var(--offWhite);
+  color: black;
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  position: relative;
+  left: 50%;
+  top: -40px;
+  transform: translateX(-50%); }
+
+.project-name {
+  margin-bottom: 1rem; }
+  .project-name span {
+    color: var(--red);
+    margin-left: 5px;
+    font-size: 2rem; }
+
+.project-card-text {
+  padding: 0 2rem 2rem 2rem;
+  text-align: center; }
+  .project-card-text a {
+    text-decoration: underline; }
 
 @media screen and (max-width: 768px) {
   .projects {
