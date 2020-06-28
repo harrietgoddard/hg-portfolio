@@ -23,6 +23,21 @@
     display: inline-block;
 }
 
+.contact-text {
+    width: 50%;
+    height: 100%;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    a {
+        text-decoration: underline;
+        display: block;
+    }
+}
+
 @media screen and (max-width: 768px) {
 
     .contact {
@@ -39,6 +54,12 @@
 
     .contact-title {
         display: block;
+    }
+
+    .contact-text {
+        width: 100%;
+        height: 50%;
+        margin: 0;
     }
 
 }
