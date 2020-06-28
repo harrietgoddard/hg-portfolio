@@ -65,64 +65,19 @@
     }
 }
 
-// .project-card {
-//     width: 900px;
-//     height: 500px;
-//     background-color: var(--teal);
-//     // border-radius: 5px;
-//     display: grid;
-//     grid-template-rows: repeat(12, 1fr);
-//     grid-template-columns: repeat(12, 1fr);
-// }
-
-// .project-card-hero {
-//     grid-row: 1 / 9;
-//     grid-column: 1 / 9;
-//     object-fit: cover;
-//     object-position: left;
-//     // border-radius: 5px 0 0 0;
-//     width: 100%;
-//     height: 100%;
-// }
-
-// .project-card-mobile {
-//     grid-row: 1 / 13;
-//     grid-column: 9 / 14;
-//     object-fit: cover;
-//     object-position: top left;
-//     // border-radius: 0 5px 5px 0;
-//     width: 100%;
-//     height: 100%;
-// }
-
-// .project-text {
-//     grid-row: 9 / 13;
-//     grid-column: 1 / 9;
-
-//     h3 {
-//         border: 3px solid var(--teal);
-//         background: white;
-//         color: black;
-//         display: inline-block;
-//         padding: 0.5rem 1rem;
-//         position: relative;
-//         left: 50%;
-//         top: -30px;
-//         transform: translateX(-50%);
-//     }
-// }
-
-
 @media screen and (max-width: 768px) {
 
     .projects {
-        height: 800px; //probably change this when project cards are added
         padding:65px 15vw;
 
         header {
             padding: 0;
             justify-content: start;
         }
+    }
+
+    .project-card {
+        width: 100%;
     }
 
 }

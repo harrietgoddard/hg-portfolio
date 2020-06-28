@@ -537,11 +537,12 @@ body:after {
 
 @media screen and (max-width: 768px) {
   .projects {
-    height: 800px;
     padding: 65px 15vw; }
     .projects header {
       padding: 0;
-      justify-content: start; } }
+      justify-content: start; }
+  .project-card {
+    width: 100%; } }
 
 .contact {
   background-color: var(--teal);
