@@ -168,13 +168,6 @@
     })
 
 
-    //SCROLL TO TOP OF PAGE ON RELOAD -----------------------------------------------------
-
-    w.onbeforeunload = () => {
-        w.scrollTo(0, 0);
-    }
-
-
     //NAV TOGGLE (MOBILE) -----------------------------------------------------------------
 
     let hamburger = d.getElementById("hamburger");

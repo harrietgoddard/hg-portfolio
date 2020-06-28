@@ -211,6 +211,12 @@ a {
   line-height: 1.8rem;
   color: var(--offWhite); }
 
+.contact-text {
+  font-family: var(--fontAlt);
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  color: var(--offWhite); }
+
 label {
   font-family: var(--fontAlt);
   text-transform: uppercase;
@@ -565,6 +571,18 @@ body:after {
 .contact-title {
   display: inline-block; }
 
+.contact-text {
+  width: 50%;
+  height: 100%;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .contact-text a {
+    text-decoration: underline;
+    display: block; }
+
 @media screen and (max-width: 768px) {
   .contact {
     height: 500px; }
@@ -574,7 +592,11 @@ body:after {
       padding: 65px 15vw;
       width: 100%; }
   .contact-title {
-    display: block; } }
+    display: block; }
+  .contact-text {
+    width: 100%;
+    height: 50%;
+    margin: 0; } }
 
 footer {
   height: calc((100vh - 60vh - (var(--border) * 2)) / 2 + var(--border));
