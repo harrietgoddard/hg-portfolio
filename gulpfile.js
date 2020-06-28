@@ -9,11 +9,11 @@ const concat = require('gulp-concat');
 /**
  * HTML
  */
-//minify HTML from src/ to dist/ for publishing
+//minify HTML from src/ to docs/ for publishing
 gulp.task('html-min', () => {
     return gulp.src('src/*.html')
       .pipe(htmlmin({ collapseWhitespace: true }))
-      .pipe(gulp.dest('dist'));
+      .pipe(gulp.dest('docs'));
   });
 
 //HTML watcher
@@ -24,11 +24,11 @@ gulp.task('watch-html', () => {
 /**
  * STYLES
  */
-//minify CSS from src/css/styles.css to dist/css/
+//minify CSS from src/css/styles.css to docs/css/
 gulp.task('minify-css', () => {
 	return gulp.src('src/css/style.css')
 		.pipe(cleanCSS({ compatibility: 'ie8' }))
-		.pipe(gulp.dest('dist/css/'));
+		.pipe(gulp.dest('docs/css/'));
 });
 
 // compile sass from src/scss/ to src/css/style.css
@@ -62,7 +62,7 @@ gulp.task('scripts', () => {
 	return gulp.src('src/js/scripts.js')
 		// .pipe(concat('main.js'))
 		.pipe(uglify())
-		.pipe(gulp.dest('dist/js'))
+		.pipe(gulp.dest('docs/js'))
 });
 
 //scripts watcher
